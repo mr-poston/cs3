@@ -22,3 +22,5 @@ def import_scanner(tester_exists):
     """import Scanner"""
     if not read_tester("import java.util."):
         raise check50.Failure("Did you import java.util.Scanner?")
+    if not read_tester("Scanner") or not read_tester("*"):
+        raise check50.Failure("Did you import java.util.Scanner?")
