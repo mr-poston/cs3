@@ -25,10 +25,10 @@ def tester_compiles(tester_exists):
 @check50.check()
 def print_hello(tester_exists):
     """Prints 'Hello again, world!'"""
-    expected = "[Hh]ello again, [Ww]orld!"
+    expected = "[Hh]ello again, [Ww]orld!.*"
     actual = get_output("Tester")
-    if expected not in actual:
-        raise check50.Failuer("Output must print 'Hello again, world!'")
+    if not match(expected, actual):
+        raise check50.Failure("Output must print 'Hello again, world!'")
 
 @check50.check()
 def import_scanner(tester_exists):
