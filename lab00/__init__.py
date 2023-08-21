@@ -13,6 +13,11 @@ def tester_exists():
     check50.exists("Tester.java")
 
 @check50.check()
+def tester_compiles(tester_exists):
+    """Tester.java compiles"""
+    check50.java.compile("Tester.java")
+
+@check50.check()
 def player_exists():
     """Player.java exists"""
     check50.exists("Player.java")
