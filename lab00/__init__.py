@@ -15,7 +15,7 @@ def tester_exists():
 @check50.check()
 def tester_compiles(tester_exists):
     """Tester.java compiles"""
-    check50.java.compile("Tester.java")
+    check50.run("javac Tester.java")
 
 @check50.check()
 def player_exists():
