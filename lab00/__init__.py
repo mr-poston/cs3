@@ -3,6 +3,7 @@ import check50
 output = ""
 
 def get_output(file_to_run):
+    check50.run("javac " + file_to_run + ".java")
     return check50.run("java " + file_to_run).stdout()
 
 def read_tester(line_to_find):
