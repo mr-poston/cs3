@@ -10,7 +10,7 @@ def read_tester(line_to_find):
 @check50.check()
 def tester_exists():
     """Tester.java exists"""
-    check50.exists("Tester.java")
+    check50.c.compile("Tester.java")
 
 @check50.check()
 def tester_compiles(tester_exists):
