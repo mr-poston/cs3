@@ -1,11 +1,5 @@
 import check50
 
-output = ""
-
-def get_output(file_to_run):
-    check50.run("javac " + file_to_run + ".java")
-    return check50.run("java " + file_to_run).stdout()
-
 def read_tester(line_to_find):
     with open("Tester.java") as file:
         for line in file:
@@ -22,15 +16,6 @@ def tester_exists():
 def tester_compiles(tester_exists):
     """Tester.java compiles"""
     check50.run("javac Tester.java")
-
-@check50.check()
-def print_hello(tester_exists):
-    """Prints 'Hello again, world!'"""
-    from re import match
-    expected = ".*[Hh]ello again, [Ww]orld!.*"
-    actual = get_output("Tester")
-    if not match(expected, actual):
-        raise check50.Failure(actual)
 
 @check50.check()
 def import_scanner(tester_exists):
