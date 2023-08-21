@@ -1,4 +1,4 @@
-check50: true
+check50:
   files:
     - !exclude "*"
     - !include "*.java"
