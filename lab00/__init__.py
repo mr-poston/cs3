@@ -1,4 +1,5 @@
 import check50
+import check50.c
 
 def read_tester(line_to_find):
     with open("Tester.java") as file:
@@ -10,7 +11,7 @@ def read_tester(line_to_find):
 @check50.check()
 def tester_exists():
     """Tester.java exists"""
-    check50.compile("Tester.java")
+    check50.c.compile("Tester.java")
 
 @check50.check()
 def tester_compiles(tester_exists):
