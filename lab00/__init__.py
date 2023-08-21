@@ -19,5 +19,6 @@ def player_exists():
 
 @check50.check()
 def import_scanner(tester_exists):
+    """import Scanner"""
     if not read_tester("import java.util."):
         raise check50.failure("Did you import java.util.Scanner?")
