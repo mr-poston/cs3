@@ -1,5 +1,1 @@
----
-check50:
-  files:
-    - !exclude "*.class"
-    - !include "*.java"
+check50: true
