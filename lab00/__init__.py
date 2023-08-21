@@ -29,7 +29,7 @@ def print_hello(tester_exists):
     expected = ".*[Hh]ello again, [Ww]orld!.*"
     actual = get_output("Tester")
     if not match(expected, actual):
-        raise check50.Failure("Output must print 'Hello again, world!'")
+        raise check50.Failure(actual)
 
 @check50.check()
 def import_scanner(tester_exists):
