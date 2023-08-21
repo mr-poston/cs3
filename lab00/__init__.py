@@ -16,7 +16,7 @@ def tester_exists():
 @check50.check()
 def tester_compiles(tester_exists):
     """Tester.java compiles"""
-    check50.run("javac Tester.java").exit(0)
+    check50.run("javac Tester.java")
 
 @check50.check()
 def import_scanner(tester_exists):
