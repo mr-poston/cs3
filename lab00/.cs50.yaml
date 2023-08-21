@@ -1,1 +1,5 @@
 check50: true
+  files: &check50_files
+
+submit50:
+  files: *check50_files
