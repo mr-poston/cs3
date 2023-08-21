@@ -26,7 +26,7 @@ def tester_compiles(tester_exists):
 def print_hello(tester_exists):
     """Prints 'Hello again, world!'"""
     from re import match
-    expected = "[Hh]ello again, [Ww]orld!.*"
+    expected = ".*[Hh]ello again, [Ww]orld!.*"
     actual = get_output("Tester")
     if not match(expected, actual):
         raise check50.Failure("Output must print 'Hello again, world!'")
