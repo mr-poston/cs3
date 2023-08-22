@@ -10,7 +10,9 @@ def read_tester(line_to_find):
 
 @check50.check()
 def test_test():
-    check50.run("java Tester").stdin("John").stdin(1).stdin(0).exit(0)
+    actual = check50.run("java Tester").stdout()
+    if "Hello" not in actual:
+        raise  check50.Failure(actual)
 
 @check50.check()
 def tester_exists():
