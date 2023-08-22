@@ -9,6 +9,10 @@ def read_tester(line_to_find):
     return False
 
 @check50.check()
+def test_test():
+    check50.run("java Tester").stdin("John").stdin(1).stdin(0).exit(0)
+
+@check50.check()
 def tester_exists():
     """Tester.java exists"""
     check50.exists("Tester.java")
