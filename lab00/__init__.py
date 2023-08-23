@@ -11,7 +11,7 @@ def read_tester(line_to_find):
 @check50.check()
 def test_test():
     check50.run("javac -target 17 Tester.java")
-    actual = check50.run("java Tester").stdout()
+    actual = check50.run("java -cp . Tester").stdout()
     if "Hello" not in actual:
         raise  check50.Failure(actual)
 
