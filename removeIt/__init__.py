@@ -10,11 +10,12 @@ def check0():
   """IteratorRemover.java compiles"""
   check50.run("javac IteratorRemover.java").exit(0)
 
-# @check50.check(exists)
-# def check2():
-#   """Example #1"""
-#   check50.run("javac Grader.java")
-#   check50.run("java Grader \"a b c a b c a\" \"a\"").stdout("[b, c, b, c]", regex=False).exit(0)
+@check50.check(exists)
+def check2():
+  """Example #1"""
+  actual = check50.run("java IteratorRemover).stdout("[b, c, b, c]", regex=False)
+  if actual.find("[b, c, b, c]") == -1:
+    raise check50.Failure(actual)
 
 # @check50.check(exists)
 # def check3():
