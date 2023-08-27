@@ -14,8 +14,8 @@ def check0():
 def check2():
   """Example #1"""
   check50.run("java IteratorRemover).stdout()
-  # if actual.find("[b, c, b, c]") == -1:
-  #   raise check50.Failure(actual)
+  if actual.find("[b, c, b, c]") == -1:
+    raise check50.Failure(actual)
 
 # @check50.check(exists)
 # def check3():
