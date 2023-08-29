@@ -5,7 +5,7 @@ import java.util.ListIterator;
 public class IteratorReplacer {
     // Instance variables
     private ArrayList<String> list;
-    private String toRemove
+    private String toRemove;
     private String replaceWith;
 
     // Constructor
@@ -35,15 +35,15 @@ public class IteratorReplacer {
     // main method
     public static void main(String[] args) {
         IteratorReplacer test = new IteratorReplacer("a b c a b c", "a", "+");
-        test.remove();
+        test.replace();
         System.out.println(test);
 
         test.setTest("a b c d e f g h i j x x x x", "x", "7");
-        test.remove();
+        test.replace();
         System.out.println(test);
 
         test.setTest("1 2 3 4 5 6 a b c a b c", "b", "#");
-        test.remove();
+        test.replace();
         System.out.println(test);
     }
 }
