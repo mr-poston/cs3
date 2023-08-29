@@ -1,4 +1,3 @@
-package Monsters;
 public class Monster implements Comparable<Monster>{
 	private String name;
 	protected int age;
@@ -7,18 +6,15 @@ public class Monster implements Comparable<Monster>{
 	private static int count = 0; // all Monsters share this variable
 
 	public Monster() {
-		this("noname", 0);
+		//TODO
 	}
 
 	public Monster(String name) {
-		this(name, 0);
+		// TODO
 	}
 
 	public Monster(String name, int age) {
-		this.name = name;
-		this.age = age;
-		count++;
-		myCount = count;
+		// TODO
 	}
 
 	public String getName() {
@@ -38,17 +34,17 @@ public class Monster implements Comparable<Monster>{
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		// TODO
 	}
 
 	public void setAge(int age) {
-		this.age = age;
+		// TODO
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-		Monster other = (Monster)obj;
-		return name == other.name && age == other.age;
+		// TODO
+		return false;
 	}
 
 	@Override
@@ -61,6 +57,7 @@ public class Monster implements Comparable<Monster>{
 
 	@Override
 	public int compareTo(Monster other) {
-		return age - other.age;
+		// TODO
+		return 0;
 	}
 }
