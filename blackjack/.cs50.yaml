@@ -3,6 +3,16 @@ check50:
         - !exclude "*"
         - !include "*.java"
         - !include "*.class"
+        - !require "Card.java"
+        - !require "BlackJackCard.java"
+        - !require "CardTestOne.java"
+        - !require "Deck.java"
+        - !require "DeckTestOne.java"
+        - !require "Player.java"
+        - !require "PlayerTestOne.java"
+        - !require "Dealer.java"
+        - !require "DealerTestOne.java"
+        - !require "BlackJack.java"
 
 submit50:
     files: *check50_files
