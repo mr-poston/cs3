@@ -1,0 +1,11 @@
+check50:
+    files: &check50_files
+        - !exclude "*"
+        - !include "UniquesDupes.java"
+        - !include "UniquesDupes.class"
+        - !include "DupRunner.java"
+        - !include "DupRunner.class"
+        - !include "Grader.class"
+
+submit50:
+    files: *check50_files
