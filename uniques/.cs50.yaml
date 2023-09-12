@@ -5,7 +5,8 @@ check50:
         - !include "UniquesDupes.class"
         - !include "DupRunner.java"
         - !include "DupRunner.class"
-        - !include "Grader.class"
+        - !include "Tester.java"
+        - !include "Tester.class"
 
 submit50:
     files: *check50_files
