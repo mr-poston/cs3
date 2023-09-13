@@ -13,7 +13,7 @@ public class OddEvenSets {
 	
 	@Override
 	public String toString() {
-		return "ODDS : " + odds + "\nEVENS : " + evens + "\n\n";
+		return "ODDS : " + odds + "\nEVENS : " + evens + "\n";
 	}
 
 	public static void main( String args[] )

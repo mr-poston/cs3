@@ -12,7 +12,7 @@ public class Tester {
             try {
                 Scanner file = new Scanner(new File(args[1]));
             }
-            catch (IOEception e) {}
+            catch (IOException e) {}
         } else {
             test = new OddEvenSets(args[0]);
             System.out.println(test);
