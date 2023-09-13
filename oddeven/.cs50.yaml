@@ -1,0 +1,11 @@
+check50:
+    files: &check50_files
+        - !exclude "*"
+        - !include "OddEvenSets.java"
+        - !include "OddEvenSets.class"
+        - !include "Tester.java"
+        - !include "Tester.class"
+        - !include "oddeven.dat"
+
+submit50:
+    files: *check50_files
