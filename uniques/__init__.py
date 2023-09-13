@@ -2,18 +2,13 @@ import check50
 
 @check50.check()
 def exists():
-    """UniquesDupes.java and DupRunner.java exist"""
-    check50.exists("UniquesDupes.java", "DupRunner.java")
+    """UniquesDupes.java exists"""
+    check50.exists("UniquesDupes.java")
 
 @check50.check(exists)
 def class_compiles():
     """UniquesDupes.java compiles"""
     check50.run("javac UniquesDupes.java").exit(0)
-
-@check50.check(exists)
-def runner_compiles():
-    """DupRunner.java compiles"""
-    check50.run("javac DupRunner.java").exit(0)
 
 @check50.check(exists)
 def example1():
