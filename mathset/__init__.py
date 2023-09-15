@@ -13,7 +13,7 @@ def class_compiles():
 @check50.check()
 def file_check():
     """Reads from mathsetdata.dat correctly"""
-    check50.run("java Tester filetest mathsetdata.dat").stdout("Set one \[1, 2, 3, 4, 5\]\nSet two \[4, 5, 6, 7, 8\]\s*", regex=True).exit(0)
+    check50.run("java MathTest").stdout("Set one \[1, 2, 3, 4, 5\]\nSet two \[4, 5, 6, 7, 8\]\s*.*", regex=True).exit(0)
 
 @check50.check()
 def default():
