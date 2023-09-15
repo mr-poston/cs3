@@ -19,6 +19,9 @@ public class Tester {
         else if (args.length == 3) {
             test = new MathSet(args[1], args[2]);
         }
+        else {
+            return;
+        }
 
         if (args[0].equals("union")) {
             System.out.println(test.union());

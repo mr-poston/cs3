@@ -25,7 +25,7 @@ def union():
     """union() works"""
     one = "1 2 3 4 5"
     two = "4 5 6 7 8"
-    check50.run("java Tester union " + one + " " + two).stdout("\[1, 2, 3, 4, 5, 6, 7, 8\]\s*", regex=True).exit(0)
+    check50.run("java Tester union \"1 2 3 4 5\" \"4 5 6 7 8\"").stdout("\[1, 2, 3, 4, 5, 6, 7, 8\]\s*", regex=True).exit(0)
 
 @check50.check()
 def intersection():
