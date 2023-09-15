@@ -20,6 +20,7 @@ public class Tester {
             test = new MathSet(args[1], args[2]);
         }
         else {
+            System.out.println(test);
             return;
         }
 
