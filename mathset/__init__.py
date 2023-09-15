@@ -63,5 +63,5 @@ def disjoint():
     check50.run("java Tester union \"1 2 3\" \"4 5 6\"").stdout("\[1, 2, 3, 4, 5, 6\]\s*", regex=True).exit(0)
     check50.run("java Tester intersection \"1 2 3\" \"4 5 6\"").stdout("\[\]\s*", regex=True).exit(0)
     check50.run("java Tester differenceAMinusB \"1 2 3\" \"4 5 6\"").stdout("\[1, 2, 3\]\s*", regex=True).exit(0)
-    check50.run("java Tester differenceBMinusA \"1 2 3\" \"4 5 6\"").stdout("\[4, 5, 6\]\s*", regex=True).exit(0)
+    check50.run("java Tester differenceBMinusA \"4 5 6\" \"1 2 3\"").stdout("\[4, 5, 6\]\s*", regex=True).exit(0)
     check50.run("java Tester symmetricDifference \"1 2 3\" \"4 5 6\"").stdout("\[1, 2, 3, 4, 5, 6\]\s*", regex=True).exit(0)
