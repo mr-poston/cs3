@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Tester {
     public static void main(String[] args) {
         MathSet test = new MathSet();
-        if (args.length >= 1 && args[0].equals("filetest")) {
+        if (args.length > 1 && args[0].equals("filetest")) {
             try {
                 Scanner in = new Scanner(new File("mathsetdata.dat"));
                 test = new MathSet(in.nextLine(), in.nextLine());
