@@ -12,6 +12,12 @@ public class Histogram
 
     }
 
+    public int size()
+    {
+        // TODO
+        
+    }
+
     @Override
     public String toString()
     {
@@ -23,5 +29,5 @@ public class Histogram
     }
 
     // main method
-    
+
 }
