@@ -24,13 +24,13 @@ public class Checker {
         if (args[0].equals("2")) {
             test = new Histogram("1 2 3 4 5 6 1 2 3 4 5 1 3 1 2 3 4");
             System.out.println(test);
-            // char\t1---5----01---5\n1\t\t****\n2\t\t***\n3\t\t****\n4\t\t***\n5\t\t**\n6\t\t*\n
+            // char\t1---5----01---5\n1\t****\n2\t***\n3\t****\n4\t***\n5\t**\n6\t*\n
         }
         if (args[0].equals("3")) {
             test = new Histogram();
             test.setSentence("4 T # @ ^ # # #");
             System.out.println(test);
-            // char\t1---5----01---5\n\t\t****\n4\t\t*\n@\t\t*\nT\t\t*\n^\t\t*\n
+            // char\t1---5----01---5\n#\t****\n4\t*\n@\t*\nT\t*\n^\t*\n
         }
     }
 }

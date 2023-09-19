@@ -21,4 +21,7 @@ public class Histogram
 
         return output + "\n";
     }
+
+    // main method
+    
 }
