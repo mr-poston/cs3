@@ -26,12 +26,12 @@ def test_0_contructor():
 @check50.check()
 def test_1_constructor():
     """One parameter constructor works"""
-    check50.run("java Checker 2").stdout("char\t1---5----01---5\n1\t****\n2\t***\n3\t****\n4\t***\n5\t**\n6\t*\n").exit(0)
+    check50.run("java Checker 2").stdout("char\t1---5----01---5\n1\t****\n2\t***\n3\t****\n4\t***\n5\t**\n6\t*\n", regex=False).exit(0)
 
 @check50.check()
 def test_set_sentence():
     """putEntry method works"""
-    check50.run("java Checker 3").stdout("char\t1---5----01---5\n#\t****\n4\t*\n@\t*\nT\t*\n^\t*\n").exit(0)
+    check50.run("java Checker 3").stdout("char\t1---5----01---5\n#\t****\n4\t*\n@\t*\nT\t*\n^\t*\n", regex=False).exit(0)
 
 @check50.check(exists)
 def imports():
