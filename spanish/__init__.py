@@ -13,12 +13,12 @@ def compiles():
 @check50.check()
 def file_check():
     """Reads from spantoeng.data correctly"""
-    check50.run("java SpanToEng").exit(0)
     output = check50.run("java SpanToEng").stdout()
     if "{a=to" not in output and "yo=i}" not in output:
         raise check50.Failure("Did you forget to print the map contents?")
     if "my hair is brown" not in output:
         raise check50.Failure("Did you forget to print the translated sentences?")
+    check50.run("java SpanToEng").exit(0)
 
 @check50.check()
 def test_put_entry():
