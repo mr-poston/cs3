@@ -35,6 +35,10 @@ def imports():
   """Import statements"""
   f = open("SpanToEng.java", "r")
   contents = f.read()
+  if contents.find("util.*") != -1:
+    raise check50.Failure("Import each class separately!!")
+  if contents.find("io.*") != -1:
+    raise check50.Failure("Import each class separately!!")
   if contents.find("java.io.File;") == -1:
     raise check50.Failure("Did you forget to input File?")
   if contents.find("java.io.IOException;") == -1:
@@ -45,7 +49,3 @@ def imports():
     raise check50.Failure("Did you forget to input TreeMap?")
   if contents.find("java.util.Scanner;") == -1:
     raise check50.Failure("Did you forget to input Scanner?")
-  if contents.find("util.*") != -1:
-    raise check50.Failure("Import each class separately!!")
-  if contents.find("io.*") != -1:
-    raise check50.Failure("Import each class separately!!")
