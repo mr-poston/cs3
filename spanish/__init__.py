@@ -28,3 +28,23 @@ def test_put_entry():
 def test_translate():
     """translate method works"""
     check50.run("java Checker 2").stdout("i want a computer virus").exit(0)
+
+@check50.check(exists)
+def imports():
+  """Import statements"""
+  f = open("SpanToEng.java", "r")
+  contents = f.read()
+  if contents.find("java.io.File;") == -1:
+    raise check50.Failure("Did you forget to input File?")
+  if contents.find("java.io.IOException;") == -1:
+    raise check50.Failure("Did you forget to input IOException?")
+  if contents.find("java.util.Map;") == -1:
+    raise check50.Failure("Did you forget to input Map?")
+  if contents.find("java.util.TreeMap;") == -1:
+    raise check50.Failure("Did you forget to input TreeMap?")
+  if contents.find("java.util.Scanner;") == -1:
+    raise check50.Failure("Did you forget to input Scanner?")
+  if contents.find("util.*") != -1:
+    raise check50.Failure("Import each class separately!!")
+  if contents.find("io.*") != -1:
+    raise check50.Failure("Import each class separately!!")
