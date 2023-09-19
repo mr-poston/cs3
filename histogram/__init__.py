@@ -16,12 +16,12 @@ def file_check():
     output = check50.run("java Histogram").stdout()
     if "a\t**" not in output and "^\t*}" not in output:
         raise check50.Failure("Did you forget to print the histograms in the main method?")
-    check50.run("java SpanToEng").exit(0)
+    check50.run("java Histogram").exit(0)
 
 @check50.check()
 def test_0_contructor():
     """No parameter constructor works"""
-    check50.run("java Checker 1").stdout("char\t1---5----01---5\n\n").exit(0)
+    check50.run("java Checker 1").stdout("char\\t1---5----01---5\\n\*\s*", regex=True).exit(0)
 
 @check50.check()
 def test_1_constructor():
