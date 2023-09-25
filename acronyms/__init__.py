@@ -1,5 +1,4 @@
 import check50
-import re
 
 @check50.check()
 def exists():
@@ -18,7 +17,7 @@ def file_check():
 
     if "{CPU=Central Processing Unit" not in output or "TSO=Texas State Optical}" not in output:
         raise check50.Failure("Did you forget to print the map contents?")
-    check50.run("java Relatives").stdout("I drove my Pick Up to Texas State Optical to get a Hard Drive\. My.*\\nCentral Processing Unit has a virus\. I sometimes Strike Out.*\\nwhen trying to kick a Field Goal\. I had 2 Runs Batted In.*\\nat the game\..*", regex=True).exit(0)
+    check50.run("java Acronyms").stdout("I drove my Pick Up to Texas State Optical to get a Hard Drive\. My.*\\nCentral Processing Unit has a virus\. I sometimes Strike Out.*\\nwhen trying to kick a Field Goal\. I had 2 Runs Batted In.*\\nat the game\..*", regex=True).exit(0)
 
 @check50.check()
 def test_0_contructor():
