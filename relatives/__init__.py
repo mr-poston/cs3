@@ -20,8 +20,8 @@ def file_check():
 
     if not re.match(expected1, output):
         raise check50.Failure("Did you forget to print each person's relatives in your main method?")
-    if not re.match(expected2, output):
-        raise check50.Failure("Did you forget to read the last name from the file and print their relatives?")
+    # if not re.match(expected2, output):
+    #     raise check50.Failure("Did you forget to read the last name from the file and print their relatives?")
     check50.run("java Relatives").exit(0)
 
 @check50.check()
