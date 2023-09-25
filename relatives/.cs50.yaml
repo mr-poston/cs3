@@ -1,0 +1,11 @@
+check50:
+    files: &check50_files
+        - !exclude "*"
+        - !include "Relatives.java"
+        - !include "Relatives.class"
+        - !include "Checker.java"
+        - !include "Checker.class"
+        - !include "relatives.dat"
+
+submit50:
+    files: *check50_files
