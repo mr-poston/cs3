@@ -14,7 +14,7 @@ def compiles():
 def file_check():
     """Reads from histogram.data correctly"""
     output = check50.run("java Histogram").stdout()
-    if "a\t**" not in output and "^\t*}" not in output:
+    if "a\t**" not in output and "^\t*" not in output:
         raise check50.Failure("Did you forget to print the histograms in the main method?")
     check50.run("java Histogram").exit(0)
 
