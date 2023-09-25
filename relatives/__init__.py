@@ -15,7 +15,7 @@ def compiles():
 def file_check():
     """Reads from relatives.data correctly"""
     output = check50.run("java Relatives").stdout()
-    expected = "Almas.*Brian.*\nBob.*John Tom.*\nDot.*Chuck Fred Jason Tom.*\nElton.*Linh.* \nFred.*Alice James.* \nJim.*Sally Tammy Tom.*\nTimmy.*Amanda.*\n\nDot is related to [Chuck, Fred, Jason, Tom]\n"
+    expected = "Almas.*Brian.*\\nBob.*John Tom.*\\nDot.*Chuck Fred Jason Tom.*\\nElton.*Linh.* \\nFred.*Alice James.* \\nJim.*Sally Tammy Tom.*\\nTimmy.*Amanda.*\\n\\nDot is related to [Chuck, Fred, Jason, Tom]\n"
 
     if not re.match(expected, output):
         raise check50.Failure("Did you forget to print the relatives in the main method?")
