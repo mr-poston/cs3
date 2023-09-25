@@ -42,7 +42,7 @@ def test_convert2():
 @check50.check(exists)
 def imports():
   """Import statements"""
-  f = open("Relatives.java", "r")
+  f = open("Acronyms.java", "r")
   contents = f.read()
   if contents.find("util.*") != -1:
     raise check50.Failure("Import each class separately!!")
