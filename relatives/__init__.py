@@ -30,12 +30,12 @@ def test_0_contructor():
 
 @check50.check()
 def test_set_sentence():
-    """putEntry method works"""
+    """setPersonRelative method works"""
     check50.run("java Checker setPersonRelative").stdout("Almas is related to Bob Brian \nDot is related to Fred \n", regex=False).exit(0)
 
 @check50.check()
 def test_set_sentence():
-    """putEntry method works"""
+    """getRelatives method works"""
     check50.run("java Checker getRelatives").stdout("[Chuck, Fred, Jason, Tom]", regex=False).exit(0)
 
 @check50.check(exists)
