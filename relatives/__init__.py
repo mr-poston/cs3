@@ -14,13 +14,13 @@ def compiles():
 def file_check():
     """Reads from relatives.data correctly"""
     output = check50.run("java Relatives").stdout()
-    expected = "Almas is related to Brian \n" +
-               "Bob is related to John Tom \n" +
-               "Dot is related to Chuck Fred Jason Tom \n" +
-               "Elton is related to Linh \n" +
-               "Fred is related to Alice James \n" +
-               "Jim is related to Sally Tammy Tom \n" +
-               "Timmy is reltated to Amanda \n\n" +
+    expected = "Almas is related to Brian \n" +\
+               "Bob is related to John Tom \n" +\
+               "Dot is related to Chuck Fred Jason Tom \n" +\
+               "Elton is related to Linh \n" +\
+               "Fred is related to Alice James \n" +\
+               "Jim is related to Sally Tammy Tom \n" +\
+               "Timmy is reltated to Amanda \n\n" +\
                "Dot is related to [Chuck, Fred, Jason, Tom]\n"
 
     if output != expected:
