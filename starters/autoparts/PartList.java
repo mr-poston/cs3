@@ -6,38 +6,22 @@ import java.util.TreeMap;
 
 public class PartList
 {
-    private Map<Part, Integer> partsMap;
+    // Instance Variable TODO
 
+    // Constructore
     public PartList()
     {
-        partsMap = new TreeMap<>();
+        // TODO
     }
 
     public PartList(String filename)
     {
-        this();
-        try
-        {
-            Scanner file = new Scanner(new File(filename));
-            while(file.hasNext())
-            {
-                Part part = new Part(file.nextLine());
-                putEntry(part);
-            }
-        }
-        catch (IOException e)
-        {
-            System.out.println(e);
-        }
+        // TODO
     }
 
     public void putEntry(Part part)
     {
-        if (partsMap.get(part) == null)
-        {
-            partsMap.put(part, 0);
-        }
-        partsMap.put(part, partsMap.get(part) + 1);
+        // TODO
     }
 
     @Override
