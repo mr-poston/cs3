@@ -73,4 +73,4 @@ def test6():
 @check50.check()
 def test7():
     """PartList.java putEntry works for multiple instances of a part"""
-    check50.run("java Checker list putEntry1").stdout("Ford Taurus 1999 Water Pump 19934 - 2", regex=False).exit(0)
+    check50.run("java Checker list putEntry2").stdout("Ford Taurus 1999 Water Pump 19934 - 2", regex=False).exit(0)
