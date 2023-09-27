@@ -1,0 +1,13 @@
+check50:
+    files: &check50_files
+        - !exclude "*"
+        - !include "Part.java"
+        - !include "Part.class"
+        - !include "PartList.java"
+        - !include "PartList.class"
+        - !include "Checker.java"
+        - !include "Checker.class"
+        - !include "autoparts.dat"
+
+submit50:
+    files: *check50_files
