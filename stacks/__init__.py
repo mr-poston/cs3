@@ -23,7 +23,7 @@ def file_check():
              "_ ) ) ( * ^ % $ #"]
     for line in enumerate(lines):
         if line[1] not in output:
-            raise check50.Failure("Output should match Sample Output in assignment description.")
+            raise check50.Failure(output)
 
 @check50.check()
 def test0():
