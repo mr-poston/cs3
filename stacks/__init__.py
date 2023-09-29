@@ -52,7 +52,7 @@ def test2():
         raise check50.Failure("setStack should return \"[t, a, c, o, c, a, t]\" for input \"t a c o c a t\"")
     if "popping all items from the stack" not in output[1]:
         raise check50.Failure("Does popEmAll print \"popping all items from the stack\"?")
-    if "_ 5 a" not in output[2]:
+    if "t a c o c a t" not in output[2]:
         raise check50.Failure("popEmAll should return \"t a c o c a t\" for input \"t a c o c a t\"")
     
 @check50.check()
@@ -65,5 +65,5 @@ def test3():
         raise check50.Failure("setStack should return \"[works, for, words, too]\" for input \"works for words too\"")
     if "popping all items from the stack" not in output[1]:
         raise check50.Failure("Does popEmAll print \"popping all items from the stack\"?")
-    if "_ 5 a" not in output[2]:
+    if "too words for works" not in output[2]:
         raise check50.Failure("popEmAll should return \"too words for works\" for input \"works for words too\"")
