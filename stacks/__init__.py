@@ -36,11 +36,11 @@ def test1():
     while "" in output:
         output.remove("")
     if "[a, 5, _]" not in output[0]:
-        raise check50.Failure("setStack should return \"[a, 5, _]\" for input \"a 5 _\"")
+        raise check50.Failure("setStack should return \"[a, 5, _]\" for input \"a 5 _\"; not " + str(output[0]))
     if "popping all items from the stack" not in output[1]:
         raise check50.Failure("Does popEmAll print \"popping all items from the stack\"?")
     if "_ 5 a" not in output[2]:
-        raise check50.Failure("popEmAll should return \"_ 5 a\" for input \"a 5 _\"")
+        raise check50.Failure("popEmAll should return \"_ 5 a\" for input \"a 5 _\"; not " + str(output[2]))
 
 @check50.check()    
 def test2():
@@ -49,11 +49,11 @@ def test2():
     while "" in output:
         output.remove("")
     if "[t, a, c, o, c, a, t]" not in output[0]:
-        raise check50.Failure("setStack should return \"[t, a, c, o, c, a, t]\" for input \"t a c o c a t\"")
+        raise check50.Failure("setStack should return \"[t, a, c, o, c, a, t]\" for input \"t a c o c a t\"; not " + str(output[0]))
     if "popping all items from the stack" not in output[1]:
         raise check50.Failure("Does popEmAll print \"popping all items from the stack\"?")
     if "t a c o c a t" not in output[2]:
-        raise check50.Failure("popEmAll should return \"t a c o c a t\" for input \"t a c o c a t\"")
+        raise check50.Failure("popEmAll should return \"t a c o c a t\" for input \"t a c o c a t\"; not " + str(output[2]))
     
 @check50.check()
 def test3():
@@ -62,8 +62,8 @@ def test3():
     while "" in output:
         output.remove("")
     if "[works, for, words, too]" not in output[0]:
-        raise check50.Failure("setStack should return \"[works, for, words, too]\" for input \"works for words too\"")
+        raise check50.Failure("setStack should return \"[works, for, words, too]\" for input \"works for words too\"; not " + str(output[0]))
     if "popping all items from the stack" not in output[1]:
         raise check50.Failure("Does popEmAll print \"popping all items from the stack\"?")
     if "too words for works" not in output[2]:
-        raise check50.Failure("popEmAll should return \"too words for works\" for input \"works for words too\"")
+        raise check50.Failure("popEmAll should return \"too words for works\" for input \"works for words too\"; not " + str(output[2]))
