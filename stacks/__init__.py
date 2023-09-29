@@ -29,6 +29,7 @@ def test0():
     """No-parameter constructor works"""
     check50.run("java StackTest").stdout("[]", regex=False).exit(0)
 
+@check50.check()
 def test1():
     """Works for input: "a 5 _" """
     output = check50.run("java StackTest \"a 5 _\"").stdout().split("\n")
@@ -40,7 +41,8 @@ def test1():
         raise check50.Failure("Does popEmAll print \"popping all items from the stack\"?")
     if "_ 5 a" not in output[2]:
         raise check50.Failure("popEmAll should return \"_ 5 a\" for input \"a 5 _\"")
-    
+
+@check50.check()    
 def test2():
     """Works for input: "t a c o c a t" """
     output = check50.run("java StackTest \"t a c o c a t\"").stdout().split("\n")
@@ -53,6 +55,7 @@ def test2():
     if "_ 5 a" not in output[2]:
         raise check50.Failure("popEmAll should return \"t a c o c a t\" for input \"t a c o c a t\"")
     
+@check50.check()
 def test3():
     """Works for input: "works for words too" """
     output = check50.run("java StackTest \"works for words too\"").stdout().split("\n")
@@ -64,7 +67,3 @@ def test3():
         raise check50.Failure("Does popEmAll print \"popping all items from the stack\"?")
     if "_ 5 a" not in output[2]:
         raise check50.Failure("popEmAll should return \"too words for works\" for input \"works for words too\"")
-
-def test5():
-    """Works for input: "works for words too" """
-    check50.run("java StackTest works for words too").stdout("[works, for, words, too]", regex=False).exit(0)
