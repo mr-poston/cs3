@@ -6,47 +6,19 @@ import java.util.Stack;
 public class StackTest
 {
     // Instance Variable TODO
-    private Stack<String> stack;
+
 
     // Constructors TODO
-    public StackTest()
-    {
-        this("");
-    }
 
-    public StackTest(String line)
-    {
-        setStack(line);
-    }
 
     // setStack Method TODO
-    public void setStack(String line)
-    {
-        stack = new Stack<>();
-        for (String s : line.split(" "))
-        {
-            stack.push(s);
-        }
-    }
+
 
     // popEmAll Method TODO
-    public void popEmAll()
-    {
-        System.out.println("popping all items from the stack");
-        while (!stack.isEmpty())
-        {
-            System.out.print(stack.pop() + " ");
-        }
-        System.out.println("\n");
-    }
+    
     
     // toString Method TODO
-    @Override
-    public String toString()
-    {
-        return stack.toString();
-    }
-    
+        
 
     public static void main(String[] args)
     {
