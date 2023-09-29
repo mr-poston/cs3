@@ -3,7 +3,7 @@ check50:
         - !exclude "*"
         - !include "StackTest.java"
         - !include "StackTest.class"
-        - !include "stacksdata.dat"
+        - !include "stackdata.dat"
 
 submit50:
     files: *check50_files
