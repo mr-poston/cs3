@@ -13,7 +13,7 @@ def compiles():
 @check50.check()
 def file_check():
     """Reads from stackdata.dat correctly"""
-    output = check50.run("java PartList").stdout()
+    output = check50.run("java StackTest").stdout()
 
     lines = ["[a, b, c, d, e, f, g, h, i]",
              "i h g f e d c b a",
