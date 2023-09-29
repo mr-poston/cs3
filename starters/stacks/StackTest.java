@@ -5,44 +5,21 @@ import java.util.Stack;
 
 public class StackTest
 {
-    // Instance Variable
-    private Stack<String> stack;
+    // Instance Variable TODO
+    
 
-    // Constructors
-    public StackTest()
-    {
-        this("");
-    }
+    // Constructors TODO
+    
 
-    public StackTest(String line)
-    {
-        setStack(line);
-    }
+    // setStack Method TODO
+    
 
-    public void setStack(String line)
-    {
-        stack = new Stack<>();
-        for (String s : line.split(" "))
-        {
-            stack.push(s);
-        }
-    }
+    // popEmAll Method TODO
+    
+    
+    // toString Method TODO
 
-    public void popEmAll()
-    {
-        System.out.println("popping all items from the stack");
-        while (!stack.isEmpty())
-        {
-            System.out.print(stack.pop() + " ");
-        }
-        System.out.println("\n");
-    }
-
-    @Override
-    public String toString()
-    {
-        return stack.toString();
-    }
+    
 
     public static void main(String[] args)
     {
@@ -50,15 +27,7 @@ public class StackTest
 
         try
         {
-            Scanner file;
-            if (args.length > 0)
-            {
-                file = new Scanner(new File(args[0]));
-            }
-            else
-            {
-                file = new Scanner(new File("stackdata.dat"));
-            }
+            Scanner file = new Scanner(new File("stackdata.dat"));
             while (file.hasNext())
             {
                 test.setStack(file.nextLine());

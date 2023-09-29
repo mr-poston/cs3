@@ -23,9 +23,33 @@ def file_check():
              "_ ) ) ( * ^ % $ #"]
     for line in enumerate(lines):
         if line[1] not in output:
-            raise check50.Failure(output)
+            raise check50.Failure(output + "Should match Sample Output from assignment page")
 
 @check50.check()
 def test0():
-    """StackTest.java constructor works"""
-    check50.run("java StackTest test1.dat").stdout("Chrystler Pacifica 2019 Radiator 74219", regex=False).exit(0)
+    """No-parameter constructor works"""
+    check50.run("java StackTest empty").stdout("[]", regex=False).exit(0)
+
+def test1():
+    """setStack works for input: a 5 _"""
+    check50.run("java StackTest a 5 _").stdout("[a, 5, _]", regex=False).exit(0)
+
+def test2():
+    """popEmAll works for input: a 5 _"""
+    check50.run("java StackTest pop a 5 _").stdout(".*_ 5 a.*", regex=True).exit(0)
+
+def test3():
+    """setStack works for input: t a c o c a t"""
+    check50.run("java StackTest t a c o c a t").stdout("[t, a, c, o, c, a, t]", regex=False).exit(0)
+
+def test4():
+    """popEmAll works for input: t a c o c a t"""
+    check50.run("java StackTest pop t a c o c a t").stdout(".*t a c o c a t.*", regex=True).exit(0)
+
+def test5():
+    """setStack works for input: works for words too"""
+    check50.run("java StackTest works for words too").stdout("[works, for, words, too]", regex=False).exit(0)
+
+def test6():
+    """popEmAll works for input: works for words too"""
+    check50.run("java StackTest pop works for words too").stdout(".*too words for works.*", regex=True).exit(0)
