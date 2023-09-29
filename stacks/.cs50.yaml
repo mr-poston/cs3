@@ -1,0 +1,9 @@
+check50:
+    files: &check50_files
+        - !exclude "*"
+        - !include "StackTest.java"
+        - !include "StackTest.class"
+        - !include "stacksdata.dat"
+
+submit50:
+    files: *check50_files
