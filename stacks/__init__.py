@@ -28,4 +28,4 @@ def file_check():
 @check50.check()
 def test0():
     """StackTest.java constructor works"""
-    check50.run("java StackTest test1").stdout("Chrystler Pacifica 2019 Radiator 74219", regex=False).exit(0)
+    check50.run("java StackTest test1.dat").stdout("Chrystler Pacifica 2019 Radiator 74219", regex=False).exit(0)
