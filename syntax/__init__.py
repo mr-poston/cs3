@@ -43,7 +43,7 @@ def test1():
 @check50.check()
 def test2():
     """Works for input: "(abc(*def)" """
-    output = check50.run("java SyntaxChecker (abc(*def)").stdout().split("\n")
+    output = check50.run("java SyntaxChecker \"(abc(*def)\"").stdout().split("\n")
     while "" in output:
         output.remove("")
     if "incorrect" not in output[0]:
