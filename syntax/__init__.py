@@ -52,7 +52,7 @@ def test2():
 @check50.check()
 def test3():
     """Works for input: "{(})" """
-    output = check50.run("java SyntaxChecker {(})").stdout().split("\n")
+    output = check50.run("java SyntaxChecker \"{(})\"").stdout().split("\n")
     while "" in output:
         output.remove("")
     if "incorrect" not in output[0]:
@@ -61,7 +61,7 @@ def test3():
 @check50.check()
 def test4():
     """Works for input: "<>" """
-    output = check50.run("java SyntaxChecker <>").stdout().split("\n")
+    output = check50.run("java SyntaxChecker \"<>\"").stdout().split("\n")
     while "" in output:
         output.remove("")
     if "is correct" not in output[0]:
