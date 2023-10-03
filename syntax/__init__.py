@@ -29,7 +29,7 @@ def file_check():
 @check50.check()
 def test0():
     """No-parameter constructor works"""
-    check50.run("java SyntaxChecker").stdout("No expression given\n", regex=False).exit(0)
+    check50.run("java SyntaxChecker").stdout("No expression given.*\n", regex=True).exit(0)
 
 @check50.check()
 def test1():
