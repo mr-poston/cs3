@@ -1,0 +1,9 @@
+check50:
+    files: &check50_files
+        - !exclude "*"
+        - !include "Postfix.java"
+        - !include "Postfix.class"
+        - !include "postfix.dat"
+
+submit50:
+    files: *check50_files
