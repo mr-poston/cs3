@@ -32,7 +32,7 @@ def test0():
 @check50.check()
 def test1():
     """Works for input: "4 5 + 7 2 - *" """
-    output = check50.run("java SyntaxChecker \"4 5 + 7 2 - *\"").stdout().split("\n")
+    output = check50.run("java Postfix \"4 5 + 7 2 - *\"").stdout().split("\n")
     while "" in output:
         output.remove("")
     if "45.0" not in output[0]:
@@ -41,7 +41,7 @@ def test1():
 @check50.check()
 def test2():
     """Works for input: "4 2 3 5 1 - + * +" """
-    output = check50.run("java SyntaxChecker \"4 2 3 5 1 - + * +\"").stdout().split("\n")
+    output = check50.run("java Postfix \"4 2 3 5 1 - + * +\"").stdout().split("\n")
     while "" in output:
         output.remove("")
     if "18.0" not in output[0]:
@@ -50,7 +50,7 @@ def test2():
 @check50.check()
 def test3():
     """Works for input: "9 3 * 8 / 4 +" """
-    output = check50.run("java SyntaxChecker \"9 3 * 8 / 4 +\"").stdout().split("\n")
+    output = check50.run("java Postfix \"9 3 * 8 / 4 +\"").stdout().split("\n")
     while "" in output:
         output.remove("")
     if "7.375" not in output[0]:
@@ -59,7 +59,7 @@ def test3():
 @check50.check()
 def test4():
     """Works for input: "3 2 /" """
-    output = check50.run("java SyntaxChecker \"3 2 /\"").stdout().split("\n")
+    output = check50.run("java Postfix \"3 2 /\"").stdout().split("\n")
     while "" in output:
         output.remove("")
     if "1.5" not in output[0]:
