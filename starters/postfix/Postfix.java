@@ -54,13 +54,12 @@ public class Postfix
             if (Character.isDigit(value))
             {
                 stack.push(Double.parseDouble("" + value));
-                System.out.println(value);
             }
             else
             {
                 double two = stack.pop();
                 double one = stack.pop();
-                System.out.println(">> " + stack.push(calc(one, two, value)));
+                stack.push(calc(one, two, value));
             }
         }
     }
@@ -105,12 +104,7 @@ public class Postfix
         }
         else
         {
-            String expression = "";
-            for (String s : args)
-            {
-                expression += s + " ";
-            }
-            test.setExpression(expression.trim());
+            test.setExpression(args[0]);
             test.solve();
             System.out.println(test);
         }
