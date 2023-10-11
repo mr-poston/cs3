@@ -48,7 +48,9 @@ def test1():
 @check50.check()
 def test2():
     """Part.java compareTo works for different models"""
-    check50.run("java Checker part compare2").stdout("29", regex=False).exit(0)
+    output = check50.run("java Checker part compare2").stdout()
+    if int(output) <= 0:
+        raise check50.Failure("Didn't work")
 
 @check50.check()
 def test3():
