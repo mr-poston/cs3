@@ -26,7 +26,7 @@ def file_check():
 
 @check50.check()
 def test0():
-    """No-parameter constructor works"""
+    """No-parameter constructor / toString works"""
     check50.run("java Postfix").stdout(".*[Ee]mpty.*\n", regex=True).exit(0)
 
 @check50.check()
