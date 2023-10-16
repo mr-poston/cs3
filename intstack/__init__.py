@@ -81,7 +81,7 @@ def check_push():
 @check50.check()
 def check_empty_1():
     """isEmpty method works when stack is not empty"""
-    check50.run("java IntStack").stdout(".*\nfalse.*" regex=True)
+    check50.run("java IntStack").stdout(".*\nfalse.*", regex=True)
 
 @check50.check()
 def check_empty_2():
