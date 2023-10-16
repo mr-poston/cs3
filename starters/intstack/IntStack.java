@@ -82,18 +82,19 @@ public class IntStack
     public static void main(String[] args)
     {
         IntStack test = new IntStack(2);
-        test.push(5);
-        test.push(7);
-        test.push(9);
-        System.out.println(test);
-        System.out.println(test.isEmpty());
-        System.out.println(test.pop());
-        System.out.println(test.peek());
-        System.out.println(test.pop());
-        System.out.println(test.pop());
         try
         {
+            test.push(5);
+            test.push(7);
+            test.push(9);
+            System.out.println(test);
+            System.out.println(test.isEmpty());
             System.out.println(test.pop());
+            System.out.println(test.peek());
+            System.out.println(test.pop());
+            System.out.println(test.pop());
+            // Should throw exception
+            System.out.println(test.pop()); 
         }
         catch (EmptyStackException e)
         {
