@@ -1,29 +1,29 @@
 import check50
 import re
 
-main = 'public static void main(String[] args)'
-+ '{'
-+ 'IntStack test = new IntStack(2);'
-+ 'try'
-+ '{'
-+ 'test.push(5);'
-+ 'test.push(7);'
-+ 'test.push(9);'
-+ 'System.out.println(test);'
-+ 'System.out.println(test.isEmpty());'
-+ 'System.out.println(test.pop());'
-+ 'System.out.println(test.peek());'
-+ 'System.out.println(test.pop());'
-+ 'System.out.println(test.pop());'
-+ '// Should throw exception'
-+ 'System.out.println(test.pop());' 
-+ '}'
-+ 'catch (EmptyStackException e)'
-+ '{'
-+ 'System.out.println(\"OOPS! Stack is empty: can\'t pop() or peek()\");'
-+ '}'
-+ 'System.out.println(test.isEmpty());'
-+ 'System.out.println(test);'
+main = 'public static void main(String[] args)' \
++ '{' \
++ 'IntStack test = new IntStack(2);' \
++ 'try' \
++ '{' \
++ 'test.push(5);' \
++ 'test.push(7);' \
++ 'test.push(9);' \
++ 'System.out.println(test);' \
++ 'System.out.println(test.isEmpty());' \
++ 'System.out.println(test.pop());' \
++ 'System.out.println(test.peek());' \
++ 'System.out.println(test.pop());' \
++ 'System.out.println(test.pop());' \
++ '// Should throw exception' \
++ 'System.out.println(test.pop());' \
++ '}' \
++ 'catch (EmptyStackException e)' \
++ '{' \
++ 'System.out.println(\"OOPS! Stack is empty: can\'t pop() or peek()\");' \
++ '}' \
++ 'System.out.println(test.isEmpty());' \
++ 'System.out.println(test);' \
 + '}'
 
 @check50.check()
