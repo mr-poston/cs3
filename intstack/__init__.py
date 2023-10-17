@@ -66,7 +66,7 @@ def param_constructor():
 @check50.check()
 def private_double_capacity():
     """private doubleCapacity method exists"""
-    f = open("IntSack.java", "r")
+    f = open("IntStack.java", "r")
     content = f.read()
     if "private void doubleCapacity()" not in content:
         raise check50.Failure("Must have private void doubleCapacity() method!")
