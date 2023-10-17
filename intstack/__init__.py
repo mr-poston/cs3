@@ -24,7 +24,7 @@ main = 'public static void main(String[] args)' \
 + '}' \
 + 'System.out.println(test.isEmpty());' \
 + 'System.out.println(test);' \
-+ '}'
++ '}}'
 
 @check50.check()
 def exists():
@@ -41,9 +41,13 @@ def original_main():
     """The main method has not been changed"""
     f = open("IntStack.java", "r")
     contents = ""
+    to_add = False
     lines = f.readlines()
     for line in lines:
-        contents += line.strip()
+        if line.contains("public static void main"):
+            to_add = True
+        if to_add:
+            contents += line.strip()
     if contents != main:
         raise check50.Failure(main + "\n---\n" + contents)
 
