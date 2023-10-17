@@ -44,7 +44,7 @@ def original_main():
     to_add = False
     lines = f.readlines()
     for line in lines:
-        if line.contains("public static void main"):
+        if "public static void main" in line:
             to_add = True
         if to_add:
             contents += line.strip()
