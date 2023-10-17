@@ -125,7 +125,7 @@ public class IntStack
             {
                 System.out.println(test.isEmpty());
             }
-            else if (args[3].equals("exception"))
+            else if (args[3].equals("exception1"))
             {
                 try
                 {
@@ -138,9 +138,16 @@ public class IntStack
                 {
                     System.out.println("OOPS! Stack is empty: can't pop()");
                 }
+            }
+            else if (args[3].equals("exception2"))
+            {
+                while (!test.isEmpty())
+                {
+                    test.pop();
+                }
                 try
                 {
-                    test.peek();
+                    tes.peek();
                 }
                 catch (EmptyStackException e)
                 {

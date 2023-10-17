@@ -65,6 +65,11 @@ def check_peek():
     check50.run("java IntStack 1 2 3 peek").stdout("3\n3").exit(0)
 
 @check50.check()
-def check_exception():
+def check_exception1():
     """pop throws EmptyStackException for empty stack"""
     check50.run("java IntStack 1 2 3 exception1").stdout("OOPS! Stack is empty: can't pop()").exit(0)
+
+@check50.check()
+def check_exception2():
+    """peek throws EmptyStackException for empty stack"""
+    check50.run("java IntStack 1 2 3 exception2").stdout("OOPS! Stack is empty: can't peek()").exit(0)
