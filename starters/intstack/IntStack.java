@@ -81,26 +81,76 @@ public class IntStack
 
     public static void main(String[] args)
     {
-        IntStack test = new IntStack(2);
-        try
+        IntStack test;
+        if (args.length == 0)
         {
+            test = new IntStack();
             test.push(5);
             test.push(7);
             test.push(9);
-            System.out.println(test);
-            System.out.println(test.isEmpty());
-            System.out.println(test.pop());
-            System.out.println(test.peek());
-            System.out.println(test.pop());
-            System.out.println(test.pop());
-            // Should throw exception
-            System.out.println(test.pop()); 
+            test.push(15);
+            System.out.println(test.size());
         }
-        catch (EmptyStackException e)
+        else if (args.length == 1)
         {
-            System.out.println("OOPS! Stack is empty: can't pop() or peek()");
+            test = new IntStack();
+            System.out.println(test.isEmpty());
         }
-        System.out.println(test.isEmpty());
-        System.out.println(test);
+        else if (args.length == 3)
+        {
+            test = new IntStack(2);
+            test.push(Integer.parseInt(args[0]));
+            test.push(Integer.parseInt(args[1]));
+            test.push(Integer.parseInt(args[2]));
+            System.out.println(test);
+            
+        }
+        else if (args.length == 4)
+        {
+            test = new IntStack();
+            test.push(Integer.parseInt(args[0]));
+            test.push(Integer.parseInt(args[1]));
+            test.push(Integer.parseInt(args[2]));
+            if (args[3].equals("pop"))
+            {
+                System.out.println(test.pop());
+                System.out.println(test.pop());
+            }
+            else if (args[3].equals("peek"))
+            {
+                System.out.println(test.peek());
+                System.out.println(test.pop());
+            }
+            else if (args[3].equals("empty"))
+            {
+                System.out.println(test.isEmpty());
+            }
+            else if (args[3].equals("exception"))
+            {
+                try
+                {
+                    for (int i = 0; i < 4; i++)
+                    {
+                        test.pop();
+                    }
+                }
+                catch (EmptyStackException e)
+                {
+                    System.out.println("OOPS! Stack is empty: can't pop() or peek()");
+                }
+                try
+                {
+                    test.peek();
+                }
+                catch (EmptyStackException e)
+                {
+                    System.out.println("OOPS! Stack is empty: can't pop() or peek()");
+                }
+            }
+        }
+        else
+        {
+            System.out.println("Must have 0, 1, 3, or 4 arguments");
+        }
     }
 }

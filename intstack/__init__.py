@@ -1,30 +1,4 @@
 import check50
-import re
-
-main = 'public static void main(String[] args)' \
-+ '{' \
-+ 'IntStack test = new IntStack(2);' \
-+ 'try' \
-+ '{' \
-+ 'test.push(5);' \
-+ 'test.push(7);' \
-+ 'test.push(9);' \
-+ 'System.out.println(test);' \
-+ 'System.out.println(test.isEmpty());' \
-+ 'System.out.println(test.pop());' \
-+ 'System.out.println(test.peek());' \
-+ 'System.out.println(test.pop());' \
-+ 'System.out.println(test.pop());' \
-+ '// Should throw exception' \
-+ 'System.out.println(test.pop());' \
-+ '}' \
-+ 'catch (EmptyStackException e)' \
-+ '{' \
-+ 'System.out.println(\"OOPS! Stack is empty: can\'t pop() or peek()\");' \
-+ '}' \
-+ 'System.out.println(test.isEmpty());' \
-+ 'System.out.println(test);' \
-+ '}}'
 
 @check50.check()
 def exists():
@@ -35,21 +9,6 @@ def exists():
 def compiles():
     """IntStack.java compiles"""
     check50.run("javac IntStack.java").exit(0)
-
-@check50.check()
-def original_main():
-    """The main method has not been changed"""
-    f = open("IntStack.java", "r")
-    contents = ""
-    to_add = False
-    lines = f.readlines()
-    for line in lines:
-        if "public static void main" in line:
-            to_add = True
-        if to_add:
-            contents += line.strip()
-    if contents != main:
-        raise check50.Failure(main + "\n---\n" + contents)
 
 @check50.check()
 def default_constructor():
@@ -77,18 +36,35 @@ def private_double_capacity():
     
 @check50.check()
 def check_push():
-    """First line of output is "[5, 7, 9]" """
-    output = check50.run("java IntStack").stdout()
-    output = output[:9]
-    if output != "[5, 7, 9]":
-        raise check50.Failure("First line should be [5, 7, 9] - try checking push or toString\n" + output)
+    """push and size methods work"""
+    check50.run("java IntStack").stdout("4").exit(0)
     
 @check50.check()
 def check_empty_1():
     """isEmpty method works when stack is not empty"""
-    check50.run("java IntStack").stdout(".*\nfalse.*", regex=True)
+    check50.run("java IntStack 1 2 3 empty").stdout("false").exit(0)
 
 @check50.check()
 def check_empty_2():
     """isEmpty method works when stack is empty"""
-    check50.run("java IntStack").stdout(".*true.*", regex=True)
+    check50.run("java IntStack empty").stdout("true").exit(0)
+
+@check50.check()
+def check_to_string():
+    """toString method works"""
+    check50.run("java IntStack 1 2 3").stdout("[1, 2, 3]").exit(0)
+
+@check50.check()
+def check_pop():
+    """pop method removes and returns the top item from the stack"""
+    check50.run("java IntStack 1 2 3 pop").stdout("3\n2").exit(0)
+
+@check50.check()
+def check_peek():
+    "peek method returns but does not remove the top item from the stack"
+    check50.run("java IntStack 1 2 3 peek").stdout("3\n3").exit(0)
+
+@check50.check()
+def check_exception():
+    """peek and pop throw EmptyStackException for empty stack"""
+    check50.run("java IntStack 1 2 3 exception").stdout("OOPS! Stack is empty: can't pop() or peek()").exit(0)
