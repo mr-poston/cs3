@@ -45,7 +45,7 @@ def original_main():
     for line in lines:
         contents += line.strip()
     if contents != main:
-        raise check50.Failure("The main method has been changed!")
+        raise check50.Failure(main + "\n---\n" + contents)
 
 @check50.check()
 def default_constructor():
