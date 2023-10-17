@@ -2,83 +2,38 @@ import java.util.EmptyStackException;
 
 public class IntStack
 {
-    private int[] rayOfInts;
-    private int numInts;
+    // TODO: instance variables
+    
 
-    public IntStack()
-    {
-        this(10);
-    }
+    // TODO: constructors
+    
 
-    public IntStack(int initialCap)
-    {
-        rayOfInts = new int[initialCap];
-        numInts = 0;
-    }
+    // TODO: push
+    
 
-    public void push(int num)
-    {
-        if (numInts == rayOfInts.length)
-        {
-            doubleCapacity();
-        }
-        rayOfInts[numInts++] = num;
-    }
+    // TODO: pop
 
-    private void doubleCapacity()
-    {
-        int[] temp = new int[rayOfInts.length * 2];
-        for (int i = 0; i < rayOfInts.length; i++)
-        {
-            temp[i] = rayOfInts[i];
-        }
-        rayOfInts = temp;
-    }
 
-    public int pop()
-    {
-        if (numInts == 0)
-        {
-            throw new EmptyStackException();
-        }
-        return rayOfInts[--numInts];
-    }
+    // TODO: peek
 
-    public boolean isEmpty()
-    {
-        return numInts == 0;
-    }
 
-    public int size()
-    {
-        return numInts;
-    }
+    // TODO: isEmpty
 
-    public int peek()
-    {
-        if (numInts == 0)
-        {
-            throw new EmptyStackException();
-        }
-        return rayOfInts[numInts - 1];
-    }
 
+    // TODO: size
+
+
+    //TODO: doubleCapacity
+    
+
+    // TODO: Complete toString
     @Override
     public String toString()
     {
-        String result = "[";
-        for (int i = 0; i < numInts; i++)
-        {
-            result += rayOfInts[i];
-            if (i < numInts - 1)
-            {
-                result += ", ";
-            }
-        }
-        result += "]";
-        return result;
+        return "You have to complete the toString method!";
     }
 
+    // main method - Do not change!
     public static void main(String[] args)
     {
         IntStack test;
@@ -102,8 +57,8 @@ public class IntStack
             test.push(Integer.parseInt(args[0]));
             test.push(Integer.parseInt(args[1]));
             test.push(Integer.parseInt(args[2]));
-            System.out.println(test); 
-            
+            System.out.println(test);
+
         }
         else if (args.length == 4)
         {
@@ -147,7 +102,7 @@ public class IntStack
                 }
                 try
                 {
-                    tes.peek();
+                    test.peek();
                 }
                 catch (EmptyStackException e)
                 {
