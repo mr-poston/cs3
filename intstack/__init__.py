@@ -80,7 +80,7 @@ def check_push():
     """First line of output is "[5, 7, 9]" """
     output = check50.run("java IntStack").stdout()
     if not re.match("[5, 7, 9].*", output, re.S):
-        raise check50.Failure("First line should be [5, 7, 9] - try checking push or toString")
+        raise check50.Failure("First line should be [5, 7, 9] - try checking push or toString\n" + output)
     
 @check50.check()
 def check_empty_1():
