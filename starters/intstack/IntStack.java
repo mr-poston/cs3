@@ -102,7 +102,7 @@ public class IntStack
             test.push(Integer.parseInt(args[0]));
             test.push(Integer.parseInt(args[1]));
             test.push(Integer.parseInt(args[2]));
-            System.out.println(test);
+            System.out.println(test); 
             
         }
         else if (args.length == 4)
