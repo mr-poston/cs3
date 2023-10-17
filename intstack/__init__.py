@@ -43,7 +43,7 @@ def original_main():
     contents = ""
     lines = f.readlines()
     for line in lines:
-        contents += line.trim()
+        contents += line.strip()
     if contents != main:
         raise check50.Failure("The main method has been changed!")
 
