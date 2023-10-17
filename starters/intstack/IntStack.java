@@ -136,7 +136,7 @@ public class IntStack
                 }
                 catch (EmptyStackException e)
                 {
-                    System.out.println("OOPS! Stack is empty: can't pop() or peek()");
+                    System.out.println("OOPS! Stack is empty: can't pop()");
                 }
                 try
                 {
@@ -144,7 +144,7 @@ public class IntStack
                 }
                 catch (EmptyStackException e)
                 {
-                    System.out.println("OOPS! Stack is empty: can't pop() or peek()");
+                    System.out.println("OOPS! Stack is empty: can't peek()");
                 }
             }
         }
