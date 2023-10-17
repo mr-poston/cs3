@@ -39,7 +39,7 @@ def compiles():
 @check50.check()
 def original_main():
     """The main method has not been changed"""
-    f = open("IntStack.java", "-r")
+    f = open("IntStack.java", "r")
     contents = ""
     lines = f.readlines()
     for line in lines:
@@ -50,7 +50,7 @@ def original_main():
 @check50.check()
 def default_constructor():
     """A default constructor exists"""
-    f = open("IntStack.java", "-r")
+    f = open("IntStack.java", "r")
     content = f.read()
     if "public IntStack()" not in content:
         raise check50.Failure("Missing the default constructor!")
@@ -58,7 +58,7 @@ def default_constructor():
 @check50.check()
 def param_constructor():
     """A one-parameter constructor exists"""
-    f = open("IntStack.java", "-r")
+    f = open("IntStack.java", "r")
     content = f.read()
     if "public IntStack(int " not in content:
         raise check50.Failure("Missing the one-parameter constructor!")
@@ -66,7 +66,7 @@ def param_constructor():
 @check50.check()
 def private_double_capacity():
     """private doubleCapacity method exists"""
-    f = open("IntSack.java", "-r")
+    f = open("IntSack.java", "r")
     content = f.read()
     if "private void doubleCapacity()" not in content:
         raise check50.Failure("Must have private void doubleCapacity() method!")
