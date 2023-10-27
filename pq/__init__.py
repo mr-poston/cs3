@@ -55,19 +55,19 @@ def test0():
 @check50.check()
 def test1():
     """Works for input: "ten twenty thirty fourty" """
-    check50.run("java PQTester \"ten twenty thirty fourty\"").stdout("\[fourty, ten, thirty, twenty\]\ngetMin() - fourty\ngetNaturalOrder() - fourty ten thirty twenty", regex=True).exit(0)
+    check50.run("java PQTester \"ten twenty thirty fourty\"").stdout("[fourty, ten, thirty, twenty]\ngetMin() - fourty\ngetNaturalOrder() - fourty ten thirty twenty", regex=False).exit(0)
 
 @check50.check()
 def test2():
     """Works for input: "a b c d e" """
-    check50.run("java PQTester \"a b c d e\"").stdout("\[a, b, c, d, e\]\ngetMin() - a\ngetNaturalOrder() - a b c d e", regex=True).exit(0)
+    check50.run("java PQTester \"a b c d e\"").stdout("[a, b, c, d, e]\ngetMin() - a\ngetNaturalOrder() - a b c d e", regex=False).exit(0)
 
 @check50.check()
 def test3():
     """Works for input: "cba abc" """
-    check50.run("java PQTester \"abc abc\"").stdout("\[abc, cba\]\ngetMin() - abc\ngetNaturalOrder() - abc cba", regex=True).exit(0)
+    check50.run("java PQTester \"abc cba\"").stdout("[abc, cba]\ngetMin() - abc\ngetNaturalOrder() - abc cba", regex=False).exit(0)
 
 @check50.check()
 def test4():
     """Works for input: "8 6 7 5 3 0 9" """
-    check50.run("java PQTester \"8 6 7 5 3 0 9\"").stdout("\[0, 5, 3, 8, 6, 7, 9\]\ngetMin() - 0\ngetNaturalOrder() - 0 3 5 6 7 8 9", regex=True).exit(0)
+    check50.run("java PQTester \"8 6 7 5 3 0 9\"").stdout("[0, 5, 3, 8, 6, 7, 9]\ngetMin() - 0\ngetNaturalOrder() - 0 3 5 6 7 8 9", regex=False).exit(0)
