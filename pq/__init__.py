@@ -50,7 +50,7 @@ def file_check():
 @check50.check()
 def test0():
     """No-parameter constructor / toString works"""
-    check50.run("java PQTester").stdout("[]").exit(0)
+    check50.run("java PQTester").stdout("[]", regex=False).exit(0)
 
 @check50.check()
 def test1():
