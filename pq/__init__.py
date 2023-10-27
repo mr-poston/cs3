@@ -35,7 +35,7 @@ def file_check():
     lines = ["[five, four, seven, two, one, three, six]",
              "getMin() - five",
              "getNaturalOrder() - five four one seven six three two",
-             "[1, 3, 2, 4, 5, three, five, two, four, one]",
+             "[1, 2, 3, 4, 5, one, two, three, four, five]",
              "getMin() - 1",
              "getNaturalOrder() - 1 2 3 4 5 five four one three two",
              "[a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p]",
