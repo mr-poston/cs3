@@ -38,7 +38,7 @@ def file_check():
              "[1, 2, 3, 4, 5, one, two, three, four, five]",
              "getMin() - 1",
              "getNaturalOrder() - 1 2 3 4 5 five four one three two",
-             "[a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p]",
+             "[a, b, f, c, d, g, m, e, i, j, k, l, h, n, o, p]",
              "getMin() - a",
              "getNaturalOrder() - a b c d e f g h i j k l m n o p"]
     for line in enumerate(lines):
