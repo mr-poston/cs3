@@ -55,8 +55,7 @@ def test0():
 @check50.check()
 def test1():
     """Works for input: "ten twenty thirty fourty" """
-    out = "\[fourty, ten, thirty, twenty\]\ngetMin() - fourty\ngetNaturalOrder() - fourty ten thirty twenty"
-    check50.run("java PQTester \"ten twenty thirty fourty\"").stdout(out, regex=True).exit(0)
+    check50.run("java PQTester \"ten twenty thirty fourty\"").stdout("\[fourty, ten, thirty, twenty\]\ngetMin() - fourty\ngetNaturalOrder() - fourty ten thirty twenty", regex=True).exit(0)
 
 @check50.check()
 def test2():
