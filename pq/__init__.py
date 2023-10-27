@@ -45,6 +45,7 @@ def file_check():
         if line[1] not in output:
             message = line[1] + "\nThe line above is missing from the output\n"
             message += "   There may be more problems when reading from queue.dat - I just quit looking."
+            message += "\n" + output
             raise check50.Failure(message)
 
 @check50.check()
