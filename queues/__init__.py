@@ -42,7 +42,7 @@ def file_check():
              "[chicken, is, a, chicken] is not a "]
     for line in enumerate(lines):
         if line[1] not in output:
-            message = line[1] + "\nThe line above is missing from the output\n"
+            message = line[1] + "palinlist\nThe line above is missing from the output\n"
             message += "   There may be more problems when reading from queue.dat - I just quit looking."
             raise check50.Failure(message)
 
