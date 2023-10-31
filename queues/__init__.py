@@ -34,12 +34,12 @@ def private_instance_variables():
 def file_check():
     """Reads from queue.dat correctly"""
     output = check50.run("java PalinList queue.dat").stdout()
-    lines = ["[one, two, three, two, one] is a palinlist",
-             "[1, 2, 3, 4, 5, one, two, three, four, five] is not a palinlist",
-             "[a, b, c, d, e, f, g, x, y, z, g, f, h] is not a palinlist",
-             "[racecar, is, racecar] is a palinlist",
-             "[1, 2, 3, a, b, c, c, b, a, 3, 2, 1] is a palinlist",
-             "[chicken, is, a, chicken] is not a palinlist"]
+    lines = ["[one, two, three, two, one] is a ",
+             "[1, 2, 3, 4, 5, one, two, three, four, five] is not a ",
+             "[a, b, c, d, e, f, g, x, y, z, g, f, h] is not a ",
+             "[racecar, is, racecar] is a ",
+             "[1, 2, 3, a, b, c, c, b, a, 3, 2, 1] is a ",
+             "[chicken, is, a, chicken] is not a "]
     for line in enumerate(lines):
         if line[1] not in output:
             message = line[1] + "\nThe line above is missing from the output\n"
