@@ -1,92 +1,37 @@
-import java.util.ArrayList;
-
 public class intQueue
 {
-    private int[] rayOfInts;
-    private int numInts;
+    // TODO: instance variables
+    
 
-    public intQueue()
-    {
-        this(10);
-    }
+    // TODO: constructors
+    
 
-    public intQueue(int initialCap)
-    {
-        rayOfInts = new int[initialCap];
-        numInts = 0;
-    }
+    // TODO: offer
+    
 
-    public void offer(int num)
-    {
-        if (numInts == rayOfInts.length)
-        {
-            doubleCapacity();
-        }
-        rayOfInts[numInts++] = num;
-    }
+    // TODO: poll
 
-    private void doubleCapacity()
-    {
-        int[] temp = new int[rayOfInts.length * 2];
-        for (int i = 0; i < rayOfInts.length; i++)
-        {
-            temp[i] = rayOfInts[i];
-        }
-        rayOfInts = temp;
-    }
 
-    public Integer poll()
-    {
-        if (numInts == 0)
-        {
-            return null;
-        } 
-        int result = rayOfInts[0];
-        int[] temp = new int[rayOfInts.length];
-        for (int i = 1; i < numInts; i++)
-        {
-            temp[i - 1] = rayOfInts[i];
-        }
-        rayOfInts = temp;
-        numInts--;
-        return result;
-    }
+    // TODO: peek
 
-    public Integer peek()
-    {
-        if (numInts == 0)
-        {
-            return null;
-        }
-        return rayOfInts[0];
-    }
 
-    public boolean isEmpty()
-    {
-        return numInts == 0;
-    }
+    // TODO: isEmpty
 
-    public int size()
-    {
-        return numInts;
-    }
 
+    // TODO: size
+
+
+    //TODO: doubleCapacity
+    
+
+    // TODO: Complete toString
     @Override
     public String toString()
     {
-        String result = "[";
-        for (int i = 0; i < numInts; i++)
-        {
-            result += rayOfInts[i];
-            if (i < numInts - 1)
-            {
-                result += ", ";
-            }
-        }
-        result += "]";
-        return result;
+        return "You have to complete the toString method!";
     }
 
+    // main method - Do not change!
     public static void main(String[] args)
     {
         intQueue test;
