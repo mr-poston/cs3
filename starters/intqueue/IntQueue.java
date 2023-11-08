@@ -1,4 +1,4 @@
-public class intQueue
+public class IntQueue
 {
     // TODO: instance variables
     
@@ -34,10 +34,10 @@ public class intQueue
     // main method - Do not change!
     public static void main(String[] args)
     {
-        intQueue test;
+        IntQueue test;
         if (args.length == 0)
         {
-            test = new intQueue();
+            test = new IntQueue();
             test.offer(5);
             test.offer(7);
             test.offer(9);
@@ -46,12 +46,12 @@ public class intQueue
         }
         else if (args.length == 1)
         {
-            test = new intQueue();
+            test = new IntQueue();
             System.out.println(test.isEmpty());
         }
         else if (args.length == 3)
         {
-            test = new intQueue();
+            test = new IntQueue();
             test.offer(Integer.parseInt(args[0]));
             test.offer(Integer.parseInt(args[1]));
             test.offer(Integer.parseInt(args[2]));
@@ -59,7 +59,7 @@ public class intQueue
         }
         else if (args.length == 4)
         {
-            test = new intQueue();
+            test = new IntQueue();
             test.offer(Integer.parseInt(args[0]));
             test.offer(Integer.parseInt(args[1]));
             test.offer(Integer.parseInt(args[2]));
