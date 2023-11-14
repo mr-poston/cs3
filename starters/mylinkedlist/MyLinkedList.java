@@ -1,143 +1,36 @@
 public class MyLinkedList
 {
-    private ListNode head;
-    private int size;
+    // TODO: MyLinkedList instance variables
+    
 
-    private class ListNode
-    {
-        int value;
-        ListNode next;
+    // TODO: private ListNode class
+    
 
-        public ListNode(int value, ListNode next)
-        {
-            this.value = value;
-            this.next = next;
-        }
-    }
+    // TODO: MyLinkedList constructor
+    
 
-    public MyLinkedList()
-    {
-        head = null;
-        size = 0;
-    }
+    //TODO: printFirstToLast method
+    
 
-    public void printFirstToLast()
-    {
-        ListNode current = head;
-        while (current != null)
-        {
-            System.out.print(current.value + " ");
-            current = current.next;
-        }
-        System.out.println();
-    }
+    // TODO: addToEmpty method
+    
 
-    public void addToEmpty(int value)
-    {
-        head = new ListNode(value, null);
-        size++;
-    }
+    // TODO: addToEnd method
+    
 
-    public void addToEnd(int value)
-    {
-        ListNode current = head;
-        while (current.next != null)
-        {
-            current = current.next;
-        }
-        current.next = new ListNode(value, null);
-        size++;
-    }
+    // TODO: add method
+    
 
-    public void add(int index, int value)
-    {
-        if (index == 0)
-        {
-            addToEmpty(value);
-        }
-        else if (index == size)
-        {
-            addToEnd(value);
-        }
-        else if (index < size)
-        {
-            int counter = 1;
-            ListNode current = head;
-            while (current.next != null)
-            {
-                if (counter == index)
-                {
-                    ListNode toInsert = new ListNode(value, current.next);
-                    current.next = toInsert;
-                    size++;
-                    return;
-                }
-                counter++;
-                current = current.next;
-            }
-        }
-        else 
-        {
-            throw new IndexOutOfBoundsException();
-        }
-    }
+    // TODO: removeFromBeginning method
+    
 
-    public int removeFromBeginning()
-    {
-        int toRemove = head.value;
-        head = head.next;
-        size--;
-        return toRemove;
-    }
+    // TODO: remove method
+    
 
-    public int remove(int index)
-    {
-        if (index == 0)
-        {
-            return removeFromBeginning();
-        }
-        else if (index < size)
-        {
-            int counter = 1;
-            ListNode current = head;
-            while (current.next != null)
-            {
-                if (counter == index)
-                {
-                    int toRemove = current.next.value;
-                    current.next = current.next.next;
-                    size--;
-                    return toRemove;
-                }
-                counter++;
-                current = current.next;
-            }
-        }
-        else 
-        {
-            throw new IndexOutOfBoundsException();
-        }
-        return 0;
-    }
+    // TODO: toString method
+    
 
-    @Override
-    public String toString()
-    {
-        String result = "[";
-        ListNode current = head;
-        while (current != null)
-        {
-            result += current.value;
-            if (current.next != null)
-            {
-                result += ", ";
-            }
-            current = current.next;
-        }
-        result += "]";
-        return result;
-    }
-
+    // main is complete - don't change it
     public static void main(String[] args)
     {
         MyLinkedList test = new MyLinkedList();
