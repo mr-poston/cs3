@@ -3,6 +3,7 @@ check50:
         - !exclude "*"
         - !include "MyLinkedList.java"
         - !include "MyLinkedList.class"
+        - !include "MyLinkedList$ListNode.class"
 
 submit50:
     files: *check50_files
