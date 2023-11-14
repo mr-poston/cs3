@@ -29,7 +29,7 @@ def default_constructor():
 @check50.check()
 def check_toString():
     """toString method works when list is empty"""
-    check50.run("java MyLinkedList toString").stdout("[]").exit(0)
+    check50.run("java MyLinkedList toString").stdout("[]", regex=False).exit(0)
     
 @check50.check()
 def check_addToEmpty():
@@ -53,7 +53,7 @@ def check_addOutOfBounds():
 
 @check50.check()
 def check_print():
-    "peek method returns but does not remove the front item from the queue"
+    "printFirstToLast works"
     check50.run("java MyLinkedList print").stdout("2 21 19 75 *", regex=True).exit(0)
 
 @check50.check()
