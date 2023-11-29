@@ -1,0 +1,14 @@
+check50:
+    files: &check50_files
+        - !exclude "*"
+        - !include "Gem.java"
+        - !include "Gem.class"
+        - !include "GemList.java"
+        - !include "GemList.class"
+        - !include "GemList$Node.class"
+        - !include "GemGame.java"
+        - !include "GemGame.class"
+        - !include "StdDraw.class"
+
+submit50:
+    files: *check50_files
