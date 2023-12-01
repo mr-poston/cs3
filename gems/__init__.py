@@ -28,4 +28,4 @@ def gem():
     desired += "\nORANGE 30, ORANGE, 30"
     output = check50.run("java Gem").stdout()
     if (output != desired):
-        raise check50.Failure("main method from Gem does not produce correct output")
+        raise check50.Failure(output)
