@@ -9,6 +9,7 @@ check50:
         - !include "GemGame.java"
         - !include "GemGame.class"
         - !include "StdDraw.class"
+        - !include "GemType.class"
 
 submit50:
     files: *check50_files
