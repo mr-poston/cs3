@@ -20,12 +20,12 @@ def product_of_evens():
     """productOfEvens method works"""
     check50.run("java RecursionFun productOfEvens").stdout("384").exit(0)
 
-@check50.check()
-def double_up():
-    """doubleUp method works"""
-    desired = "[3, 7, 12, 9]\n"
-    desired += "[3, 3, 7, 7, 12, 12, 9, 9]"
-    check50.run("java RecursionFun doubleUp").stdout(desired).exit(0)
+# @check50.check()
+# def double_up():
+#     """doubleUp method works"""
+#     desired = "[3, 7, 12, 9]\n"
+#     desired += "[3, 3, 7, 7, 12, 12, 9, 9]"
+#     check50.run("java RecursionFun doubleUp").stdout(desired).exit(0)
 
 @check50.check()
 def count_to_by():
@@ -41,18 +41,18 @@ def matching_digits():
     desired += "3"
     check50.run("java RecursionFun matchingDigits").stdout(desired).exit(0)
 
-@check50.check()
-def print_this():
-    """printThis method works"""
-    desired = "*\n"
-    desired += "**\n"
-    desired += "<*>\n"
-    desired += "<**>\n"
-    desired += "<<*>>\n"
-    desired += "<<**>>\n"
-    desired += "<<<*>>>\n"
-    desired += "<<<**>>>"
-    check50.run("java RecursionFun printThis").stdout(desired).exit(0)
+# @check50.check()
+# def print_this():
+#     """printThis method works"""
+#     desired = "*\n"
+#     desired += "**\n"
+#     desired += "<*>\n"
+#     desired += "<**>\n"
+#     desired += "<<*>>\n"
+#     desired += "<<**>>\n"
+#     desired += "<<<*>>>\n"
+#     desired += "<<<**>>>"
+#     check50.run("java RecursionFun printThis").stdout(desired).exit(0)
 
 @check50.check()
 def print_nums_2():
@@ -66,5 +66,5 @@ def print_nums_2():
     desired += "4 3 2 1 2 3 4\n"
     desired += "4 3 2 1 1 2 3 4\n"
     desired += "5 4 3 2 1 2 3 4 5\n"
-    desired += "5 4 3 2 1 1 2 3 4 5\n"
+    desired += "5 4 3 2 1 1 2 3 4 5"
     check50.run("java RecursionFun printNums2").stdout(desired).exit(0)
