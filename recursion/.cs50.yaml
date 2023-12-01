@@ -1,0 +1,8 @@
+check50:
+    files: &check50_files
+        - !exclude "*"
+        - !include "RecursionFun.java"
+        - !include "RecursionFun.class"
+
+submit50:
+    files: *check50_files
