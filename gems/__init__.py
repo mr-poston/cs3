@@ -26,4 +26,4 @@ def gem():
     output = "GREEN 10, GREEN, 10"
     output += "\nBLUE 20, BLUE, 20"
     output += "\nORANGE 30, ORANGE, 30"
-    check50.run("java Gem -Djava.awt.headless=true").stdout(output).exit(0)
+    check50.run("java -Djava.awt.headless=true Gem").stdout(output).exit(0)
