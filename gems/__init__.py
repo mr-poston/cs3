@@ -23,7 +23,9 @@ def compiles2():
 @check50.check()
 def gem():
     """main method from Gem produces correct output"""
-    output = "GREEN 10, GREEN, 10"
-    output += "\nBLUE 20, BLUE, 20"
-    output += "\nORANGE 30, ORANGE, 30"
-    check50.run("java -Djava.awt.headless=true Gem").stdout(output).exit(0)
+    desired = "GREEN 10, GREEN, 10"
+    desired += "\nBLUE 20, BLUE, 20"
+    desired += "\nORANGE 30, ORANGE, 30"
+    output = check50.run("java Gem").stdout()
+    if (output != desired):
+        raise check50.Failure("main method from Gem does not produce correct output")
