@@ -8,6 +8,7 @@ check50:
         - !include "GemList$Node.class"
         - !include "GemGame.java"
         - !include "GemGame.class"
+        - !include "StdDraw.java"
         - !include "StdDraw.class"
         - !include "GemType.class"
 
