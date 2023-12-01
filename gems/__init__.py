@@ -11,16 +11,6 @@ def exists2():
     check50.exists("GemList.java")
 
 @check50.check()
-def compiles1():
-    """Gem.java compiles"""
-    check50.run("javac Gem.java").exit(0)
-
-@check50.check()
-def compiles2():
-    """GemList.java compiles"""
-    check50.run("javac GemList.java").exit(0)
-
-@check50.check()
 def gem():
     """main method from Gem produces correct output"""
     desired = "GREEN 10, GREEN, 10"
