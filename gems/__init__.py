@@ -19,3 +19,11 @@ def compiles1():
 def compiles2():
     """GemList.java compiles"""
     check50.run("javac GemList.java").exit(0)
+
+@check50.check()
+def gem():
+    """main method from Gem produces correct output"""
+    desired = "GREEN 10, GREEN, 10"
+    desired += "\nBLUE 20, BLUE, 20"
+    desired += "\nORANGE 30, ORANGE, 30"
+    check50.run("java Gem").stdout(desired).exit(0)
