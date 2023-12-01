@@ -20,7 +20,7 @@ def gem():
 
 @check50.check()
 def gem_list():
-    """"main method from GemList produces correct output"""
+    """main method from GemList produces correct output"""
     desired = "<none>\n\n"
     desired += "size = 0, score = 0\n\n"
     desired += "BLUE\n"
