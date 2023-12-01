@@ -26,6 +26,4 @@ def gem():
     desired = "GREEN 10, GREEN, 10"
     desired += "\nBLUE 20, BLUE, 20"
     desired += "\nORANGE 30, ORANGE, 30"
-    output = check50.run("java Gem").stdout()
-    if (output != desired):
-        raise check50.Failure(output)
+    check50.run("java Gem").stdout(desired).exit(0)
