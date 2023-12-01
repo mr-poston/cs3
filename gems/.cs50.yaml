@@ -11,7 +11,9 @@ check50:
         - !include "StdDraw.java"
         - !include "StdDraw.class"
         - !include "GemType.class"
-        - !include "*.png"
+        - !include "gem_blue.png"
+        - !include "gem_green.png"
+        - !include "gem_orange.png"
 
 submit50:
     files: *check50_files
