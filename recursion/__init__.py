@@ -41,18 +41,18 @@ def matching_digits():
     desired += "3"
     check50.run("java RecursionFun matchingDigits").stdout(desired).exit(0)
 
-# @check50.check()
-# def print_this():
-#     """printThis method works"""
-#     desired = "*\n"
-#     desired += "**\n"
-#     desired += "<*>\n"
-#     desired += "<**>\n"
-#     desired += "<<*>>\n"
-#     desired += "<<**>>\n"
-#     desired += "<<<*>>>\n"
-#     desired += "<<<**>>>"
-#     check50.run("java RecursionFun printThis").stdout(desired).exit(0)
+@check50.check()
+def print_this():
+    """printThis method works"""
+    desired = "*\n"
+    desired += "**\n"
+    desired += "<*>\n"
+    desired += "<**>\n"
+    desired += "<<*>>\n"
+    desired += "<<**>>\n"
+    desired += "<<<*>>>\n"
+    desired += "<<<**>>>"
+    check50.run("java RecursionFun printThis").stdout(desired).exit(0)
 
 @check50.check()
 def print_nums_2():
