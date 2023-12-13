@@ -26,7 +26,7 @@ def endl():
     count = 0
     words = contents.split()
     for word in words:
-        if "endl" in word:
+        if word == "endl" or word == "endl;":
             count += 1
     if count <= 3:
         raise check50.Failure(str(words) + " You must use endl three times!")
