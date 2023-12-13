@@ -25,12 +25,11 @@ def endl():
     contents = f.read()
     count = 0
     for word in contents:
-        if word == "endl;" or word == "endl":
+        if "endl" in word:
             count += 1
     if count < 3:
         raise check50.Failure("You must use endl three times!")
 
 @check50.check()
 def is_haiku():
-    """Contains three lines with 5, 7, 5 syllables"""
-    print("This will be checked manually!")
+    """Contains three lines with 5, 7, 5 syllables - This will be checked manually!"""
