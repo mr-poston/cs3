@@ -28,7 +28,7 @@ def endl():
         if "endl" in word:
             count += 1
     if count < 3:
-        raise check50.Failure("You must use endl three times!")
+        raise check50.Failure(str(count) + "You must use endl three times!")
 
 @check50.check()
 def is_haiku():
