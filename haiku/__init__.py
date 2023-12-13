@@ -24,12 +24,11 @@ def endl():
     f = open("haiku.cpp", "r")
     contents = f.read()
     count = 0
-    words = []
-    for word in contents:
-        words.append(word)
+    words = contents.split()
+    for word in words:
         if "endl" in word:
             count += 1
-    if count < 3:
+    if count <= 3:
         raise check50.Failure(str(words) + " You must use endl three times!")
 
 @check50.check()
