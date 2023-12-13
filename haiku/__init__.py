@@ -28,7 +28,7 @@ def endl():
     for word in words:
         if word == "endl" or word == "endl;":
             count += 1
-    if count <= 3:
+    if count < 3:
         raise check50.Failure(str(words) + " " + str(count) + " You must use endl three times!")
 
 @check50.check()
