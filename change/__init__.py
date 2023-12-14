@@ -18,12 +18,12 @@ def test1():
 @check50.check()
 def test2():
     """Works for 93"""
-    check50.run("./change").stdin("436", prompt=True).stdout("\n[Qq].*3\n[Dd].*1\n[Nn].*1\n[Pp].*3", regex=True).exit(0)
+    check50.run("./change").stdin("93", prompt=True).stdout("\n[Qq].*3\n[Dd].*1\n[Nn].*1\n[Pp].*3", regex=True).exit(0)
 
 @check50.check()
 def test3():
     """Works for 999"""
-    check50.run("./change").stdin("436", prompt=True).stdout("\n[Qq].*39\n[Dd].*2\n[Nn].*0\n[Pp].*4", regex=True).exit(0)
+    check50.run("./change").stdin("999", prompt=True).stdout("\n[Qq].*39\n[Dd].*2\n[Nn].*0\n[Pp].*4", regex=True).exit(0)
 
 @check50.check()
 def negative():
