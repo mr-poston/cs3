@@ -13,4 +13,4 @@ def compiles():
 @check50.check()
 def check_middle():
     """Correctly inserts word1 in the middle of word2 when word2 has an odd number of letters"""
-    check50.run("./hole_in_one").stdin("HOLE", str_line="HOLE", prompt=True).exit(0)
+    check50.run("./hole_in_one").stdin("HOLE").exit(0)
