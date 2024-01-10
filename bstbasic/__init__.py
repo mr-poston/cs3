@@ -16,6 +16,6 @@ def compiles():
 def output():
     """Correct Output"""
     output = check50.run("java BSTBasic")
-    optput = output.replace(" ", "").replace("\n", "")
+    output = output.replace(" ", "").replace("\n", "")
     if output != desired:
         raise check50.Failure("Your output does not match the desired output")
