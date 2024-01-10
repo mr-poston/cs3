@@ -1,7 +1,7 @@
 check50:
     files: &check50_files
         - !exclude "*"
-        - !include "StackTest.java"
+        - !include "BSTBasic.java"
         - !include "*.class"
 
 submit50:
