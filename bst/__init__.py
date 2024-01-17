@@ -28,7 +28,7 @@ def varags_constructor():
 @check50.check()
 def add_check():
     """add method"""
-    check50.run("java BST 3").stdout(" *3 6 8 10 12 14 16 *", regex=True).exit(0)
+    check50.run("java BST 3").stdout(" *3  6  8  10  12  14  16 *", regex=True).exit(0)
 
 @check50.check()
 def contains_check():
