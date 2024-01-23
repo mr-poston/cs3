@@ -23,14 +23,21 @@ def one():
 @check50.check()
 def two():
     """Add two elements and swap down"""
-    check50.run("java MinHeap 2").stdout("[3, 5]").exit(0);
+    check50.run("java MinHeap 2").stdout("[3, 5]").exit(0)
 
 @check50.check()
 def three():
     """Add two elements with varargs constructor"""
-    check50.run("java MinHeap 3").stdout("[1, 6, 5, 10]").exit(0);
+    check50.run("java MinHeap 3").stdout("[1, 6, 5, 10]").exit(0)
 
 @check50.check()
 def four():
     """Remove and swap up"""
-    check50.run("java MinHeap 4").stdout("\n*PRINTING THE HEAP!\n* *2\n *5  7\n *9  10  8  75\n *17", regex=True).exit(0);
+    desired = "PRINTING THE HEAP!25791087517"
+    output = check50.run("java MinHeap 4").stdout()
+    while "\n" in output:
+        output = output.remove("\n")
+    while " " in output:
+        output = output.remove(" ")
+    if output != desired:
+        raise check50.Failure("Heap should contain:\n2\n5  7\n9  10  8  75\n17")
