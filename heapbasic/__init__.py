@@ -33,4 +33,4 @@ def three():
 @check50.check()
 def four():
     """Remove and swap up"""
-    check50.run("java MinHeap 4").stdout("\n\nPRINTING THE HEAP!\n\n      2\n     5  7\n   9  10  8  75\n17").exit(0);
+    check50.run("java MinHeap 4").stdout("\n\nPRINTING THE HEAP!\n\n\n      2\n     5  7\n   9  10  8  75\n17").exit(0);
