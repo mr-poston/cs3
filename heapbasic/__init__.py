@@ -36,8 +36,8 @@ def four():
     desired = "PRINTING THE HEAP!25791087517"
     output = check50.run("java MinHeap 4").stdout()
     while "\n" in output:
-        output = output.remove("\n")
+        output = output.replace("\n", "")
     while " " in output:
-        output = output.remove(" ")
+        output = output.replace(" ", "")
     if output != desired:
         raise check50.Failure("Heap should contain:\n2\n5  7\n9  10  8  75\n17")
