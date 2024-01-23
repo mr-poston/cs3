@@ -40,4 +40,5 @@ def four():
     while " " in output:
         output = output.replace(" ", "")
     if output != desired:
-        raise check50.Failure("Heap should contain:\n2\n5  7\n9  10  8  75\n17")
+        raise check50.Failure(output + "\n" + desired)
+        #"Heap should contain:\n2\n5  7\n9  10  8  75\n17"
