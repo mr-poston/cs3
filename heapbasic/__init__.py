@@ -13,8 +13,7 @@ def compiles():
 @check50.check()
 def empty():
     """Empty Heap"""
-    output = check50.run("java MinHeap 0").stdout()
-    check50.run("java MinHeap 0").stdout(output).exit(0)
+    check50.run("java MinHeap 0").stdout("\[\]", regex=True).exit(0)
 
 @check50.check()
 def one():
