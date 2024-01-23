@@ -4,6 +4,7 @@ check50:
         - !include "BST.java"
         - !include "BST.class"
         - !include "BST$Node.class"
+        - !include "BST$TreeNode.class"
 
 submit50:
     files: *check50_files
