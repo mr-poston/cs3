@@ -47,7 +47,7 @@ def hard_code():
         if first_line in line:
             if "//" in line and line.index("//") > line.index(first_line):
                 cheat = True
-        if second line in line:
+        if second_line in line:
             if "//" in line and line.index("//") > line.index(second_line):
                 cheat = True
     if cheat:
