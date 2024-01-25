@@ -1,0 +1,8 @@
+check50:
+    files: &check50_files
+        - !exclude "*"
+        - !include "MinHeap.java"
+        - !include "MinHeap.class"
+
+submit50:
+    files: *check50_files
