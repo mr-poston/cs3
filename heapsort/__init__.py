@@ -34,3 +34,21 @@ def line_2():
     line2 = lines[1]
     if line2 != desired:
         raise check50.Failure("Second line of output should be: " + desired)
+
+@check50.check()
+def hard_code():
+    """You did not hard-code the answer"""
+    f = open("MinHeap.java", "r")
+    lines = f.read().split("\n")
+    first_line = "[1, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 17, 75, 99]"
+    second_line = "[-3, 1, 1, 3, 3, 4, 5, 5, 6, 11, 17, 18, 28, 29]"
+    cheat = False
+    for line in lines:
+        if first_line in line:
+            if "//" in line and line.index("//") > line.index(first_line):
+                cheat = True
+        if second line in line:
+            if "//" in line and line.index("//") > line.index(second_line):
+                cheat = True
+    if cheat:
+        raise check50.Failure("Don't hard-code the answer, you cheater!")
