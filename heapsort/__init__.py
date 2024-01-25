@@ -45,10 +45,12 @@ def hard_code():
     cheat = False
     for line in lines:
         if first_line in line:
-            if not "//" in line and line.index("//") < line.index(first_line):
-                cheat = True
+            cheat = True
+            if "//" in line and line.index("//") < line.index(first_line):
+                cheat = False
         if second_line in line:
-            if not "//" in line and line.index("//") < line.index(second_line):
-                cheat = True
+            cheat = True
+            if "//" in line and line.index("//") < line.index(second_line):
+                cheat = False
     if cheat:
         raise check50.Failure("Don't hard-code the answer, you cheater!")
