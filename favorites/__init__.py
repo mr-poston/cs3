@@ -18,4 +18,4 @@ def compiles():
 @check50.check()
 def input():
     """Asks for three pieces of information."""
-    check50.run("./favorites").exit(0)
+    check50.run("./favorites").stdin("one", prompt=True).stdout("one").exit(0)
