@@ -13,4 +13,4 @@ def compiles():
 @check50.check()
 def input():
     """Asks for three pieces of information."""
-    check50.run("./favorites").stdin("one", prompt=True).stdin("one", prompt=True).stdin("one", prompt=True).stdout(".*: one\n.*: two\n.*: three\n", regex=True).exit(0)
+    check50.run("./favorites").stdin("one").stdin("one").stdin("one").stdout(".*: one\n.*: two\n.*: three\n", regex=True).exit(0)
