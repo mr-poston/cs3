@@ -1,6 +1,7 @@
 check50:
     files: &check50_files
         - !exclude "*"
+        - !include "fovorites"
         - !include "favorites.cpp"
 
 submit50:
