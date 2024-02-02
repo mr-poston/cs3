@@ -16,6 +16,6 @@ def input():
     check50.run("./favorites").stdin("one", prompt=True).stdin("two", prompt=True).stdin("three", prompt=True).exit(0)
 
 @check50.check()
-def input():
+def output():
     """Repeats the information from input."""
     check50.run("./favorites").stdin("subject", prompt=True).stdin("music", prompt=True).stdin("hobby", prompt=True).stdout(".*subject\n.*music\n.*hobby", regex=True).exit(0)
