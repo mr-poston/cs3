@@ -13,9 +13,9 @@ def compiles():
 @check50.check()
 def input():
     """Asks for three pieces of information."""
-    check50.run("./favorites").stdin("one", prompt=True).stdin("two", prompt=True).stdin("three", prompt=True).stdout(".*one\n.*two\n.*three", regex=True).exit(0)
+    check50.run("./favorites").stdin("one", prompt=True).stdin("two", prompt=True).stdin("three", prompt=True).exit(0)
 
-# @check50.check()
-# def input():
-#     """Asks for three pieces of information."""
-#     check50.run("./favorites").stdin("one", prompt=True).stdout("one").exit(0)
+@check50.check()
+def input():
+    """Repeats the information from input."""
+    check50.run("./favorites").stdin("subject", prompt=True).stdin("music", prompt=True).stdin("hobby", prompt=True).stdout(".*subject\n.*music\n.*hobby", regex=True).exit(0)
