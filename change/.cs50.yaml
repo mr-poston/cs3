@@ -1,5 +1,0 @@
-check50:
-  files: &check_50_files
-
-submit50:
-  files: *check_50_files
