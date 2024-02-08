@@ -33,3 +33,13 @@ def test4():
     output = check50.run("./sum_digits").stdin("2024", prompt=True).stdout()
     if "8" not in output:
         raise check50.Failure("Output shows incorrect sum")
+
+@check50.check(compiles)
+def negative():
+    """Program rejects negative input"""
+    check50.run("./sum_digits").stdin("-4", prompt=True).exit(1)
+
+@check50.check(compiles)
+def zero():
+    """Program rejects 0 for input"""
+    check50.run("./sum_digits").stdin("0", prompt=True).exit(1)
