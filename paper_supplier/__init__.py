@@ -16,7 +16,7 @@ def test1():
     output = check50.run("./paper_supplier").stdin("2200", prompt=True).stdout()
     lines = output.split("\n")
     if len(lines) != 3:
-        raise check50.Failure("Make sure your output is exactly 3 lines (after the user input)")
+        raise check50.Failure(str(len(lines)) + "Make sure your output is exactly 3 lines (after the user input)")
     dm = 0
     tmspc = 1
     for i in range(len(lines)):
