@@ -1,0 +1,8 @@
+check50:
+    files: &check50_files
+        - !exclude "*"
+        - !include "sum_digits"
+        - !include "sum_digits.cpp"
+
+submit50:
+    files: *check50_files
