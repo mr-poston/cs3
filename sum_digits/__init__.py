@@ -32,7 +32,7 @@ def test3():
     output = check50.run("./sum_digits").stdin("1975", prompt=True).stdout()
     lines = output.split("\n")
     if "22" not in lines[-1]:
-        raise check50.Failure("Output shows incorrect sum " + str(len(lines)))
+        raise check50.Failure("Output shows incorrect sum " + str(llines[-1]))
 
 @check50.check(compiles)
 def test4():
