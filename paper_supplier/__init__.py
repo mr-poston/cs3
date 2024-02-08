@@ -3,7 +3,7 @@ import check50
 @check50.check()
 def exists():
     """paper_supplier.cpp exists"""
-    check50.exists("paper_suppler.cpp")
+    check50.exists("paper_supplier.cpp")
 
 @check50.check(exists)
 def compiles():
