@@ -32,7 +32,7 @@ def test1():
         raise check50.Failure("Output should suggest switching to The Michael Scott Paper Company")
 
 @check50.check(compiles)
-def test1():
+def test2():
     """Works for input 3500"""
     output = check50.run("./paper_supplier").stdin("3500", prompt=True).stdout()
     lines = output.split("\n")
