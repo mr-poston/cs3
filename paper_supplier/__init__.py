@@ -8,7 +8,7 @@ def exists():
 @check50.check(exists)
 def compiles():
     """paper_supplier.cpp compiles"""
-    check_50.run("make paper_supplier").exit(0)
+    check50.run("make paper_supplier").exit(0)
 
 @check50.check(compiles)
 def test1():
