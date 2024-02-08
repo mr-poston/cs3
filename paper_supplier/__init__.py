@@ -49,5 +49,5 @@ def test2():
         raise check50.Failure("Output should indicate cost for Dunder Mifflin is 14165")
     if "The Michael Scott Paper Company" not in lines[tmspc] and "14315" not in lines[tmspc]:
         raise check50.Failure("Output should indicate cost for The Michael Scott Paper Company is 14315")
-    if "The Michael Scott Paper Company" not in lines[2]:
+    if "Dunder Mifflin" not in lines[2]:
         raise check50.Failure("Output should suggest staying with Dunder Mifflin")
