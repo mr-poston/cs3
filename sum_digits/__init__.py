@@ -13,10 +13,7 @@ def compiles():
 @check50.check(compiles)
 def test1():
     """Works for input 6835"""
-    output = check50.run("./sum_digits").stdin("6835", prompt=True).stdout()
-    lines = output.split("\n")
-    if "22" not in lines[-1]:
-        raise check50.Failure("Output should show a sum of 22")
+    check50.run("./sum_digits").stdin("6835", prompt=True).stdout(".*\n.*22.*", regex=True).exit(0)
 
 @check50.check(compiles)
 def test2():
