@@ -15,8 +15,8 @@ def test1():
     """Works for input 2200"""
     output = check50.run("./paper_supplier").stdin("2200", prompt=True).stdout()
     lines = output.split("\n")
-    if len(lines) != 3:
-        raise check50.Failure(str(len(lines)) + "Make sure your output is exactly 3 lines (after the user input)")
+    if len(lines) != 4:
+        raise check50.Failure("Make sure your output has exactly 3 lines after the user input")
     dm = 0
     tmspc = 1
     for i in range(len(lines)):
@@ -36,8 +36,8 @@ def test2():
     """Works for input 3500"""
     output = check50.run("./paper_supplier").stdin("3500", prompt=True).stdout()
     lines = output.split("\n")
-    if len(lines) != 3:
-        raise check50.Failure("Make sure your output is exactly 3 lines (after the user input)")
+    if len(lines) != 4:
+        raise check50.Failure("Make sure your output has exactly 3 lines after the user input")
     dm = 0
     tmspc = 1
     for i in range(len(lines)):
