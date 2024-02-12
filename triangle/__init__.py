@@ -38,8 +38,8 @@ def test3():
     for line in contents:
         if "printSpaces" in line:
             found = True
-            while " " in line:
-                line = line.remove(" ")
+            # while " " in line:
+            #     line = line.remove(" ")
             if "voidprintSpaces(int" not in line:
                 raise check50.Failure("function header should be:\nvoid printSpaces(int num)\nnot\n" + line)
             break
