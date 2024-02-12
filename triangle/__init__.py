@@ -39,7 +39,7 @@ def test3():
         if "printSpaces" in line:
             found = True
             while " " in line:
-                line = line.remove(" ")
+                line = line.replace(" ", "")
             if "voidprintSpaces(int" not in line:
                 raise check50.Failure("function header should be:\nvoid printSpaces(int num)")
             break
@@ -57,7 +57,7 @@ def test4():
         if "printCircles" in line:
             found = True
             while " " in line:
-                line = line.remove(" ")
+                line = line.replace(" ", "")
             if "voidprintCircles(int" not in line:
                 raise check50.Failure("function header should be:\nvoid printCircles(int num)")
             break
