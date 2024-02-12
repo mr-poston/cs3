@@ -33,15 +33,15 @@ def test3():
     """printSpaces function exists"""
     f = open("triangle.cpp", "r")
     contents = f.read()
-    contents = contents.split()
+    contents = contents.split("\n")
     found = False
     for line in contents:
         if "printSpaces" in line:
             found = True
-            # while " " in line:
-            #     line = line.remove(" ")
+            while " " in line:
+                line = line.remove(" ")
             if "voidprintSpaces(int" not in line:
-                raise check50.Failure("function header should be:\nvoid printSpaces(int num)\nnot\n" + line)
+                raise check50.Failure("function header should be:\nvoid printSpaces(int num)")
             break
     if not found:
         raise check50.Failure("printSpaces function not found")
@@ -51,7 +51,7 @@ def test4():
     """printCircles function exists"""
     f = open("triangle.cpp", "r")
     contents = f.read()
-    contents = contents.split()
+    contents = contents.split("\n")
     found = False
     for line in contents:
         if "printCircles" in line:
