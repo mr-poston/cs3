@@ -36,3 +36,20 @@ def test3():
                                 .stdin("0.5", prompt=True).stdout(".*0.5", regex=True) \
                                 .stdin("22", prompt=True).stdout(".*22", regex=True) \
                                 .stdin("18", prompt=True).stdin("3", prompt=True).stdout(".*3", regex=True).exit(0)
+
+@check50.check(exists)
+def test4():
+    """inputLine function exists"""
+    f = open("easier_input.cpp", "r")
+    contents = f.read()
+    lines = contents.split("\n")
+    found = False
+    for line in lines:
+        if "inputLine" in line:
+            found = True
+            while " " in line:
+                line = line.replace(" ", "")
+            if "stringinputLine(string" not in line:
+                raise check50.Failure"(function header should be:\nstring inputLine(string prompt)")
+    if not found:
+        raise check50.Failure("could not find inputLine function")
