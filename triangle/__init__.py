@@ -18,3 +18,12 @@ def test1():
         desired += " " * (4 - i - 1) + "o" * (2 * i + 1) + "\n"
     desired = desired[:-1]
     check50.run("./triangle").stdin("4", prompt=True).stdout(desired).exit(0)
+
+@check50.check(compiles)
+def test2():
+    """Works for input of 6"""
+    desired = ""
+    for i in range(6):
+        desired += " " * (6 - i - 1) + "o" * (2 * i + 1) + "\n"
+    desired = desired[:-1]
+    check50.run("./triangle").stdin("6", prompt=True).stdout(desired).exit(0)
