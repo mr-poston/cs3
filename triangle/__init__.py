@@ -27,3 +27,35 @@ def test2():
         desired += " " * (6 - i - 1) + "o" * (2 * i + 1) + "\n"
     desired = desired[:-1]
     check50.run("./triangle").stdin("6", prompt=True).stdout(desired).exit(0)
+
+@check50.check(exists)
+def test3():
+    """printSpaces function exists"""
+    f = open("triangle.cpp", "r")
+    contents = f.read()
+    found = False
+    for line in contents:
+        if "printSpaces" in line:
+            found = True
+            while " " in line:
+                line.remove(" ")
+            if "voidprintSpaces(int" not in line:
+                raise check50.Failure("function header should be:\nvoid printSpaces(int num)")
+    if not found:
+        raise check50.Failure("printSpaces function not found")
+
+@check50.check(exists)
+def test4():
+    """printCircles function exists"""
+    f = open("triangle.cpp", "r")
+    contents = f.read()
+    found = False
+    for line in contents:
+        if "printCircles" in line:
+            found = True
+            while " " in line:
+                line.remove(" ")
+            if "voidprintCircles(int" not in line:
+                raise check50.Failure("function header should be:\nvoid printCircles(int num)")
+    if not found:
+        raise check50.Failure("printCircles function not found")
