@@ -30,7 +30,7 @@ def test2():
     check50.run("./easier_input").stdin("hello 3.14 3.4 0.5 22 3", prompt=True).stdout(outcheck).exit(0)
 
 @check50.check(compiles)
-def test1():
+def test3():
     """Works when user enters out of range int"""
     outcheck = "You entered: hello\n"
     outcheck += "You entered: 3.14"
