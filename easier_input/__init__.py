@@ -18,10 +18,10 @@ def test1():
     out3 = "You entered: 0.5"
     out4 = "You entered: 22"
     out5 = "You entered: 3"
-    check50.run("./easier_input").stdin("hello", prompt=True).stdout(out1).
-                                .stdin("3.14", prompt=True).stdout(out2).
-                                .stdin("0.5", prompt=True).stdout(out3).
-                                .stdin("22", prompt=True).stdout(out4).
+    check50.run("./easier_input").stdin("hello", prompt=True).stdout(out1). \
+                                .stdin("3.14", prompt=True).stdout(out2). \
+                                .stdin("0.5", prompt=True).stdout(out3). \
+                                .stdin("22", prompt=True).stdout(out4). \
                                 .stdin("3", prompt=True).stdout(out5).exit(0)
 
 def test2():
