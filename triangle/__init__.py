@@ -34,6 +34,7 @@ def test3():
     f = open("triangle.cpp", "r")
     contents = f.read()
     found = False
+    message = ""
     for line in contents:
         if "printSpaces" in line:
             found = True
@@ -42,8 +43,10 @@ def test3():
             if "voidprintSpaces(int" not in line:
                 raise check50.Failure("function header should be:\nvoid printSpaces(int num)")
             break
+        else:
+            message += line
     if not found:
-        raise check50.Failure("printSpaces function not found")
+        raise check50.Failure(message)
 
 @check50.check(exists)
 def test4():
