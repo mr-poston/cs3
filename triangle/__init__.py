@@ -29,7 +29,7 @@ def test2():
     check50.run("./triangle").stdin("6", prompt=True).stdout(desired).exit(0)
 
 @check50.check(compiles)
-def test2():
+def test10():
     """Works for input greater than 10"""
     desired = ""
     for i in range(6):
