@@ -15,6 +15,6 @@ def test1():
     """Works for input of 4"""
     desired = ""
     for i in range(4):
-        desired += " " * (4 - i + 1) + "o" * (2 * i + 1) + "\n"
+        desired += " " * (4 - i - 1) + "o" * (2 * i + 1) + "\n"
     desired = desired[:-1]
     check50.run("./triangle").stdin("4", prompt=True).stdout(desired).exit(0)
