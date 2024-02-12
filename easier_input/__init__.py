@@ -51,5 +51,6 @@ def test4():
                 line = line.replace(" ", "")
             if "stringinputLine(string" not in line:
                 raise check50.Failure("function header should be:\nstring inputLine(string prompt)")
+            break
     if not found:
         raise check50.Failure("could not find inputLine function")
