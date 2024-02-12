@@ -17,5 +17,6 @@ def test1():
     desired = ""
     for i in range(4):
         desired += " " * (4 - i + 1) + "*" * (2 * i + 1) + "\n"
+    desired = desired[:-1]
     if output != desired:
         raise check50.Failure("Should produce:\n" + desired)
