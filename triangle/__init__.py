@@ -37,6 +37,7 @@ def test3():
     message = ""
     for line in contents:
         if "printSpaces" in line:
+            message += line
             found = True
             while " " in line:
                 line = line.remove(" ")
@@ -44,7 +45,7 @@ def test3():
                 raise check50.Failure("function header should be:\nvoid printSpaces(int num)")
             break
         else:
-            message += line
+            message += "pass"
     if not found:
         raise check50.Failure(message)
 
