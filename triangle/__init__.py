@@ -19,4 +19,4 @@ def test1():
         desired += " " * (4 - i + 1) + "*" * (2 * i + 1) + "\n"
     desired = desired[:-1]
     if output != desired:
-        raise check50.Failure("Should produce:\n" + desired)
+        raise check50.Failure("Should produce:\n" + desired + "\nnot\n" + output)
