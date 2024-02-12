@@ -41,7 +41,7 @@ def test3():
             while " " in line:
                 line = line.remove(" ")
             if "voidprintSpaces(int" not in line:
-                raise check50.Failure("function header should be:\nvoid printSpaces(int num)")
+                raise check50.Failure("function header should be:\nvoid printSpaces(int num)\nnot\n" + line)
             break
     if not found:
         raise check50.Failure("printSpaces function not found")
