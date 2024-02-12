@@ -28,6 +28,15 @@ def test2():
     desired = desired[:-1]
     check50.run("./triangle").stdin("6", prompt=True).stdout(desired).exit(0)
 
+@check50.check(compiles)
+def test2():
+    """Works for input greater than 10"""
+    desired = ""
+    for i in range(6):
+        desired += " " * (6 - i - 1) + "o" * (2 * i + 1) + "\n"
+    desired = desired[:-1]
+    check50.run("./triangle").stdin("11", prompt=True).stdin("6", prompt=True).stdout(desired).exit(0)
+
 @check50.check(exists)
 def test3():
     """printSpaces function exists"""
