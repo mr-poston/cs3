@@ -18,7 +18,7 @@ def test1():
     outcheck += "You entered: 0.5"
     outcheck += "You entered: 22"
     outcheck += "You entered: 3"
-    check50.run("./easier_input").stdin("hello 3.14 0.5 22 3", prompt=True).stdout(outcheck).exit(0)
+    check50.run("./easier_input").stdin("hello\n 3.14\n 0.5\n 22\n 3", prompt=True).stdout(outcheck).exit(0)
 
 def test2():
     """Works when user enters out of range double"""
