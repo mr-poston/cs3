@@ -41,6 +41,7 @@ def test3():
                 line.remove(" ")
             if "voidprintSpaces(int" not in line:
                 raise check50.Failure("function header should be:\nvoid printSpaces(int num)")
+            break
     if not found:
         raise check50.Failure("printSpaces function not found")
 
@@ -57,5 +58,6 @@ def test4():
                 line.remove(" ")
             if "voidprintCircles(int" not in line:
                 raise check50.Failure("function header should be:\nvoid printCircles(int num)")
+            break
     if not found:
         raise check50.Failure("printCircles function not found")
