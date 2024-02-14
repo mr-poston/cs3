@@ -16,6 +16,6 @@ def test1():
     check50.run("./verifivation").stdin("100000", prompt=True).stdout("30").exit(0)
 
 check50.check(compiles)
-def test1():
+def test2():
     """Correctly computes the number of matches per 200,000 tests"""
     check50.run("./verifivation").stdin("200000", prompt=True).stdout("63").exit(0)
