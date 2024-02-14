@@ -65,3 +65,17 @@ def test7():
     output = check50.run("./encryption").stdin("ithi", prompt=True).stdin("d", prompt=True).stdin("15", prompt=True).stdout()
     if correct not in output:
         raise check50.Failure("Output should contain:\n" + correct + "\tbut was: " + output)
+
+@check50.check(compiles)
+def test8():
+    """Rejects incorrect encrtpt/decrypt choice"""
+    output = check50.run("./encryption").stdin("a", prompt=True).stdin("0", prompt=True).stdin("e", prompt=True).stdin("1", prompt=True).stdout()
+    if "B" not in output or "Z" not in output:
+        raise check50.Failure("uh-oh")
+
+@check50.check(compiles)
+def test9():
+    """Rejects out of range shift"""
+    output = check50.run("./encryption").stdin("a", prompt=True).stdin("e", prompt=True).stdin("99", prompt=True).stdin("1", prompt=True).stdout()
+    if "B" not in output or "Z" not in output:
+        raise check50.Failure("uh-oh")
