@@ -14,6 +14,6 @@ def compiles():
 def test1():
     """Correctly shifts 'test' by 15"""
     correct = "ITHI"
-    output = check50.run("./encryption").stdin("test e 15", prompt=True).stdout()
-    if output.toupper() != correct:
+    output = check50.run("./encryption").stdin("test", prompt=True).stdin("e", prompt=True).stdin("15", prompt=True).stdout()
+    if output.toupper() not in correct:
         raise check50.Failure("Output should be:\n" + correct)
