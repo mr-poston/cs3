@@ -59,7 +59,7 @@ def test6():
         raise check50.Failure("Output should contain:\n" + correct + "\tbut was: " + output)
 
 @check50.check(compiles)
-def test6():
+def test7():
     """Correctly decrypts 'ithi' with shift of 15"""
     correct = "TEST"
     output = check50.run("./encryption").stdin("ithi", prompt=True).stdin("d", prompt=True).stdin("15", prompt=True).stdout()
