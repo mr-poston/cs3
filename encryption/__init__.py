@@ -16,4 +16,4 @@ def test1():
     correct = "ITHI"
     output = check50.run("./encryption").stdin("test", prompt=True).stdin("e", prompt=True).stdin("15", prompt=True).stdout()
     if output.upper() not in correct:
-        raise check50.Failure("Output should be:\n" + correct)
+        raise check50.Failure("Output should be:\n" + correct + "\tnot: " + output.upper())
