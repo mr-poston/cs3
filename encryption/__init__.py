@@ -15,5 +15,5 @@ def test1():
     """Correctly shifts 'test' by 15"""
     correct = "ITHI"
     output = check50.run("./encryption").stdin("test", prompt=True).stdin("e", prompt=True).stdin("15", prompt=True).stdout()
-    if output.upper() not in correct:
+    if correct not in output.upper():
         raise check50.Failure("Output should be:\n" + correct + "\tnot: " + output.upper())
