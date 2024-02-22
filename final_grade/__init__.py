@@ -25,7 +25,7 @@ def test1():
         if not c:
             c = " C " in row.upper() and " 45" in row
     if not b and not c:
-        raise check50.Failure("Output should indicate an average of 85 to get a B and an average of 45 to keep a C\n" + str(output))
+        raise check50.Failure("Output should indicate an average of 85 to get a B and an average of 45 to keep a C\n" + str(row))
 
 @check50.check(compiles)
 def test2():
