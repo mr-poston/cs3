@@ -20,6 +20,8 @@ def test1():
     b = False
     c = False
     for row in output:
+        if row.isspace():
+            continue
         if not b:
             b = " B " in row.upper() and " 85" in row
         if not c:
