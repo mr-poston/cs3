@@ -26,7 +26,7 @@ def test1():
         if not c:
             c = " C " in row.upper() and " 45" in row
     if not b and not c:
-        raise check50.Failure("Output should indicate an average of 85 to get a B and an average of 45 to keep a C\n" + str(output) + "\n" + str(" C " in output))
+        raise check50.Failure("Output should indicate an average of 85 to get a B and an average of 45 to keep a C")
 
 @check50.check(compiles)
 def test2():
@@ -34,11 +34,16 @@ def test2():
     output = check50.run("./final_grade").stdin("92", prompt=True) \
                                          .stdin("87", prompt=True) \
                                          .stdin("-1", prompt=True).stdout()
+    output = output.split("\n")
+    a = False
+    b = False
     for row in output:
-        a = " A " in row.upper() and " 90.5" in row
-        b = " B " in row.upper() and " 70.5" in row
-        if not a and not b:
-            raise check50.Failure("Output should indicate an average of 90.5 to get an A and an average of 70.5 to keep a B")
+        if not a:
+            a = " A " in row.upper() and " 90.5" in row
+        if not b:
+            b = " B " in row.upper() and " 70.5" in row
+    if not a and not b:
+        raise check50.Failure("Output should indicate an average of 90.5 to get an A and an average of 70.5 to keep a B")
 
 @check50.check(compiles)
 def test3():
@@ -47,11 +52,14 @@ def test3():
                                          .stdin("80", prompt=True) \
                                          .stdin("80", prompt=True) \
                                          .stdin("-1", prompt=True).stdout()
+    output = output.split("\n")
+    a = False
+    b = False
     for row in output:
         b = " B " in row.upper() and " 80" in row
         a = " A " not in row.upper() and " a " not in row.lower()
-        if not b and not a:
-            raise check50.Failure("Output should indicate an average of 80 to keep a B but nothing about an A")
+    if not b and not a:
+        raise check50.Failure("Output should indicate an average of 80 to keep a B but nothing about an A")
 
 @check50.check(compiles)
 def test4():
