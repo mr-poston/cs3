@@ -17,6 +17,7 @@ def test1():
                                          .stdin("73", prompt=True) \
                                          .stdin("74", prompt=True) \
                                          .stdin("-1", prompt=True).stdout()
+    output = output.split("\n")
     b = False
     c = False
     for row in output:
@@ -24,10 +25,6 @@ def test1():
             b = " B " in row.upper() and " 85" in row
         if not c:
             c = " C " in row.upper() and " 45" in row
-    if b:
-        raise check50.Failure("B")
-    if c:
-        raise check50.Failure("C")
     if not b and not c:
         raise check50.Failure("Output should indicate an average of 85 to get a B and an average of 45 to keep a C\n" + str(output) + "\n" + str(" C " in output))
 
