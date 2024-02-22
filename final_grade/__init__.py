@@ -20,14 +20,12 @@ def test1():
     b = False
     c = False
     for row in output:
-        if b and c:
-            break
         if not b:
             b = " B " in row.upper() and " 85" in row
         if not c:
             c = " C " in row.upper() and " 45" in row
     if not b and not c:
-        raise check50.Failure("Output should indicate an average of 85 to get a B and an average of 45 to keep a C\n" + str(row))
+        raise check50.Failure("Output should indicate an average of 85 to get a B and an average of 45 to keep a C\n" + str(output) + "\n" + str(" B " in ouptut))
 
 @check50.check(compiles)
 def test2():
