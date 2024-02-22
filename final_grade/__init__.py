@@ -13,10 +13,10 @@ def compiles():
 @check50.check(compiles)
 def test1():
     """ Works for input 88 73 74 -1"""
-    output = check50.run("./final_grade").stdin("88", prompt=True) \
-                                         .stdin("73", prompt=True) \
-                                         .stdin("74", prompt=True) \
-                                         .stdin("-1", prompt=True).stdout()
+    output = check50.run("./final_grade").stdin("88", prompt=True).
+                                          stdin("73", prompt=True).
+                                          stdin("74", prompt=True).
+                                          stdin("-1", prompt=True).stdout()
     b = False
     c = False
     for row in output:
@@ -25,7 +25,7 @@ def test1():
         if not c:
             c = " C " in row.upper() and " 45" in row
     if not b and not c:
-        raise check50.Failure("Output should indicate an average of 85 to get a B and an average of 45 to keep a C\n" + str(output) + "\n" + str(" B " in ouptut))
+        raise check50.Failure("Output should indicate an average of 85 to get a B and an average of 45 to keep a C\n" + str(output) + "\n" + str(" B " in output))
 
 @check50.check(compiles)
 def test2():
