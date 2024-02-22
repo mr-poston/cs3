@@ -13,9 +13,9 @@ def compiles():
 @check50.check(compiles)
 def test1():
     """ Works for input 88 73 74 -1"""
-    output = check50.run("./final_grade").stdin("88", prompt=True)
-                                         .stdin("73", prompt=True)
-                                         .stdin("74", prompt=True)
+    output = check50.run("./final_grade").stdin("88", prompt=True) \
+                                         .stdin("73", prompt=True) \
+                                         .stdin("74", prompt=True) \
                                          .stdin("-1", prompt=True).stdout()
     for row in output:
         b = " B " in row.upper() and " 85" in row
@@ -26,8 +26,8 @@ def test1():
 @check50.check(compiles)
 def test2():
     """ Works for input 92 87 -1"""
-    output = check50.run("./final_grade").stdin("92", prompt=True)
-                                         .stdin("87", prompt=True)
+    output = check50.run("./final_grade").stdin("92", prompt=True) \
+                                         .stdin("87", prompt=True) \
                                          .stdin("-1", prompt=True).stdout()
     for row in output:
         a = " A " in row.upper() and " 90.5" in row
@@ -38,9 +38,9 @@ def test2():
 @check50.check(compiles)
 def test3():
     """ Works for input 80 80 80 -1"""
-    output = check50.run("./final_grade").stdin("80", prompt=True)
-                                         .stdin("80", prompt=True)
-                                         .stdin("80", prompt=True)
+    output = check50.run("./final_grade").stdin("80", prompt=True) \
+                                         .stdin("80", prompt=True) \
+                                         .stdin("80", prompt=True) \
                                          .stdin("-1", prompt=True).stdout()
     for row in output:
         b = " B " in row.upper() and " 80" in row
