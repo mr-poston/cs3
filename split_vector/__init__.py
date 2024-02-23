@@ -18,6 +18,7 @@ def test1():
 @check50.check(compiles)
 def test2():
     """Creates two new int vectors"""
-    output = check50.run("./split_vector").stdout()
-    if output.count("vector<int>") < 3:
-        raise check50.Failure("Make sure to make a vector for evens and a separate vector for odds\n" + str(output.count("vector<int>")))
+    file = open("split_vector.cpp", "r")
+    contents = file.read()
+    if contents.count("vector<int>") > 3:
+        raise check50.Failure("Make sure to make a vector for evens and a separate vector for odds")
