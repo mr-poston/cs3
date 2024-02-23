@@ -20,7 +20,7 @@ def test2():
     """Creates two new int vectors"""
     file = open("split_vector.cpp", "r")
     contents = file.read()
-    if contents.count("vector<int>") > 3:
+    if contents.count("vector<int>") < 3:
         raise check50.Failure("Make sure to make a vector for evens and a separate vector for odds")
 
 @check50.check(exists)
