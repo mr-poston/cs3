@@ -13,20 +13,20 @@ def compiles():
 @check50.check(compiles)
 def test1():
     """Works for input 4 2 7 10 -1"""
-    check50.run("./sorted_addition").stdin("4", prompt=True)
-                                    .stdin("2", prompt=True)
-                                    .stdin("7", prompt=True)
-                                    .stdin("10", prompt=True)
-                                    .stdin("-1", prompt=True)
+    check50.run("./sorted_addition").stdin("4", prompt=True) \
+                                    .stdin("2", prompt=True) \
+                                    .stdin("7", prompt=True) \
+                                    .stdin("10", prompt=True) \
+                                    .stdin("-1", prompt=True) \
                                     .stdout("2\n4\n7\n10").exit(0)
 
 @check50.check(compiles)
 def test2():
     """Works for input 3 2 1 -1"""
-    check50.run("./sorted_addition").stdin("3", prompt=True)
-                                    .stdin("2", prompt=True)
-                                    .stdin("1", prompt=True)
-                                    .stdin("-1", prompt=True)
+    check50.run("./sorted_addition").stdin("3", prompt=True) \
+                                    .stdin("2", prompt=True) \
+                                    .stdin("1", prompt=True) \
+                                    .stdin("-1", prompt=True) \
                                     .stdout("1\n2\n3\n").exit(0)
 
 @check50.check(exists)
