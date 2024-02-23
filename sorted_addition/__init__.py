@@ -44,3 +44,11 @@ def test4():
     contents = f.read()
     if "sort" in contents:
         raise check50.Failure("Your code must not include the substring \"sort\"")
+
+@check50.check(exists)
+def test5():
+    """include the vector library"""
+    file = open("sorted_addition.cpp", "r")
+    contents = file.read()
+    if "#include <vector>" not in contents:
+        raise check50.Failure("Be sure to #include <vector> at the top of your program!")
