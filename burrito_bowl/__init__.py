@@ -31,6 +31,6 @@ def test1():
             if line[:4] == "void" and line[-1] != ";" and "burritoBowl" in line:
                 if not found_prototype:
                     raise check50.Failure("You need to declare a function prototype before its definition")
-                if not ("rice," in line and "beans," in line and "salsa," in line):
+                if not ("rice," in line and "beans," in line and "salsa" in line):
                     raise check50.Failure("Make sure you don't use default values in your function definition\n" + line)
                         
