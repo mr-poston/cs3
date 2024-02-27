@@ -23,7 +23,7 @@ def test1():
                 continue
             line = line.replace(" ", "")
             if line[:4] == "void" and line[-1] == ";" and "burritoBowl" in line:
-                if 'rice="white"' not in line or 'beans="black"' not in line or 'salsa="mild"' not in line:
+                if 'rice="white"' not in line and 'beans="black"' not in line and 'salsa="mild"' not in line:
                     raise check50.Failure("Your function prototype does not look right")
                 else:
                     found_prototype = True
@@ -31,6 +31,6 @@ def test1():
             if line[:4] == "void" and line[-1] != ";" and "burritoBowl" in line:
                 if not found_prototype:
                     raise check50.Failure("You need to declare a function prototype before its definition")
-                if "rice," not in line or "beans," not in line or "salsa," not in line:
+                if "rice," not in line and "beans," not in line and "salsa," not in line:
                     raise check50.Failure("Make sure you don't use default values in your function definition")
                         
