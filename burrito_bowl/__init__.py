@@ -27,7 +27,7 @@ def test1():
                     raise check50.Failure("Your function prototype does not look right")
                 else:
                     found_prototype = True
-                    raise check50.Falure(line)
+                    raise check50.Failure(line)
                 continue
             if line[:4] == "void" and line[-1] != ";" and "burritoBowl" in line:
                 if not found_prototype:
