@@ -23,7 +23,7 @@ def test1():
                 continue
             line = line.replace(" ", "")
             if line[:4] == "void" and line[-1] == ";" and "burritoBowl" in line:
-                if not ('rice="white"' in line or 'beans="black"' in line or 'salsa="mild"' in line):
+                if not ('rice="white"' in line and 'beans="black"' in line and 'salsa="mild"' in line):
                     raise check50.Failure("Your function prototype does not look right")
                 else:
                     found_prototype = True
