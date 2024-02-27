@@ -21,7 +21,7 @@ def test1():
             line = line.strip()
             if len(line) == 0:
                 continue
-            line = line.remove(" ")
+            line = line.replace(" ", "")
             if line[:4] == "void" and line[-1] == ";" and "burritoBowl" in line:
                 if 'rice="white"' not in line or 'beans="black"' not in line or 'salsa="mild"' not in line:
                     raise check50.Failure("Your function prototype does not look right")
