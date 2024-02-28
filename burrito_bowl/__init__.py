@@ -34,8 +34,29 @@ def test1():
                 if "rice=" in line or "beans=" in line or "salsa=" in line:
                     raise check50.Failure("Make sure you don't use default values in your function definition")
 
-@check50.check(compiles)
+@check50.check(exists)
 def test2():
+    """Correct function calls"""
+    chicken = False
+    steak = False
+    veggie = False
+    with open("burrito_bowl.cpp", "r") as file:
+        content = file.read()
+        lines = content.split("\n")
+        for line in lines:
+            line = line.strip()
+            line = line.replace(" ", "")
+            if line == 'burritoBowl("chicken")':
+                chicken = True
+            if line == 'burritoBowl("steak","white","refried","hot")':
+                steak = True
+            if line == 'burritoBowl("veggie","brown")':
+                veggie = True
+    if not (chicken and steak and veggie):
+        raise check50.Failure("Make sure your function calls use default values when possible!")
+
+@check50.check(compiles)
+def test3():
     """Output matches sample from directions"""
     chicken = False
     steak = False
