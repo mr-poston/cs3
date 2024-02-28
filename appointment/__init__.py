@@ -64,5 +64,3 @@ def test3():
 @check50.check(compiles)
 def test4():
     check50.run("./appointment").stdin("Oncologist").stdin("3").stdout("Your follow up will be on a Thursday").exit(0)
-
-test1()
