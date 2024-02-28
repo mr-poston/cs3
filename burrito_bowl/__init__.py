@@ -10,9 +10,9 @@ def compiles():
     """burrito_bowl.cpp compiles"""
     check50.run("make burrito_bowl").exit(0)
 
-@check50.check(compiles)
+@check50.check(exists)
 def test1():
-    """Function prototype"""
+    """Correct function prototype and definition"""
     found_prototype = False
     with open("burrito_bowl.cpp") as file:
         content = file.read()
@@ -33,4 +33,27 @@ def test1():
                     raise check50.Failure("You need to declare a function prototype before its definition")
                 if "rice=" in line or "beans=" in line or "salsa=" in line:
                     raise check50.Failure("Make sure you don't use default values in your function definition")
+
+@check50.check(compiles)
+def test2():
+    """Output matches sample from directions"""
+    chicken = False
+    steak = False
+    veggie = False
+    output = check50.run("./burrito_bowl").stdout()
+    lines = output.split("\n")
+    for line in lines:
+        if "chicken" in line and "white rice" in line and "mild salsa" in line:
+            chicken = True
+        if "steak" in line and "white rice" in line and "hot salsa" in line:
+            steak = True
+        if "veg" in line and "brown rice" in line and "mild salsa" in line:
+            veggie = True
+    if not (chicken and steak and veggie):
+        message = "Your output should include the following burritos:\n"
+        message += "\tA chicken burrito with white rice, black beans, and mild salsa.\n"
+        message += "\tA steak burrito with white rice, refried beans, and hot salsa.\n"
+        message += "\tA veggie burrito with brown rice, black beans, and mild salsa.\n"
+        message += "Your actual output was:\n" + output
+        raise check50.Failure(message)
                         
