@@ -46,11 +46,11 @@ def test2():
         for line in lines:
             line = line.strip()
             line = line.replace(" ", "")
-            if line == 'burritoBowl("chicken")':
+            if line == 'burritoBowl("chicken");':
                 chicken = True
-            if line == 'burritoBowl("steak","white","refried","hot")':
+            if line == 'burritoBowl("steak","white","refried","hot");':
                 steak = True
-            if line == 'burritoBowl("veggie","brown")':
+            if line == 'burritoBowl("veggie","brown");':
                 veggie = True
     if not (chicken and steak and veggie):
         raise check50.Failure("Make sure your function calls use default values when possible!")
