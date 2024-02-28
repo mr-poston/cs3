@@ -63,4 +63,15 @@ def test3():
 
 @check50.check(compiles)
 def test4():
+    """Works for Oncologist on Tuesday"""
     check50.run("./appointment").stdin("Oncologist").stdin("3").stdout("Your follow up will be on a Thursday").exit(0)
+
+@check50.check(compiles)
+def test5():
+    """Works for Orthodontist on Thursday"""
+    check50.run("./appointment").stdin("Orthodontist").stdin("5").stdout("Your follow up will be on a Sunday").exit(0)
+
+@check50.check(compiles)
+def test6():
+    """Works for Generalist on Wednesday"""
+    check50.run("./appointment").stdin("Generalist").stdin("4").stdout("Your follow up will be on a Wednesday").exit(0)
