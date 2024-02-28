@@ -42,10 +42,11 @@ def test2():
         line = line.replace(" ", "")
         if line.count("string") == 2 and line.count("int") == 2 and "=" not in line and ";" not in line:
             header = True
+            stringC = line.count("string")
             break
     if not header:
         sample = "string nextAppointment(string type, int day, int daysToNext)"
-        raise check50.Failure("Your function header should look similar to the following:\n\t" + sample)
+        raise check50.Failure("Your function header should look similar to the following:\n\t" + sample + "\n\t" + stringC)
 
 @check50.check(exists)
 def test3():
