@@ -38,14 +38,16 @@ def test2():
     """Function header looks good"""
     lines = get_file_lines()
     header = False
+    strC = "ex"
     for line in lines:
         line = line.replace(" ", "")
         if line.count("string") == 2 and line.count("int") == 2 and "=" not in line and ";" not in line:
             header = True
+            strC = line.count("string")
             break
     if not header:
         sample = "string nextAppointment(string type, int day, int daysToNext)"
-        raise check50.Failure("Your function header should look similar to the following:\n\t" + sample + "\n\t" + str(lines))
+        raise check50.Failure("Your function header should look similar to the following:\n\t" + sample + "\n\t" + str(strC))
 
 @check50.check(exists)
 def test3():
