@@ -45,7 +45,7 @@ def test2():
             break
     if not header:
         sample = "string nextAppointment(string type, int day, int daysToNext)"
-        raise check50.Failure("Your function header should look similar to the following:\n\t" + sample + "\n\t" + lines)
+        raise check50.Failure("Your function header should look similar to the following:\n\t" + sample + "\n\t" + str(lines))
 
 @check50.check(exists)
 def test3():
