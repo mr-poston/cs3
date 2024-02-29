@@ -25,13 +25,13 @@ def test1():
     lines = get_file_lines()
     prototype = False
     for line in lines:
-        if line.count("string ") == 2 and line.count("int ") == 2:
+        if line.count("string ") == 1 and line.count("int ") == 2:
             line = line.replace(" ", "")
             if "=7" in line and ";" in line:
                 prototype = True
                 break
     if not prototype:
-        sample = "string nextAppointment(string type, int day, int daysToNext = 7);"
+        sample = "string nextAppointment(int day, int daysToNext = 7);"
         raise check50.Failure("Your prototype should look similar to the following:\n\t" + sample)
 
 @check50.check(exists)
@@ -40,13 +40,13 @@ def test2():
     lines = get_file_lines()
     header = False
     for line in lines:
-        if line.count("string ") == 2 and line.count("int ") == 2: 
+        if line.count("string ") == 1 and line.count("int ") == 2: 
             line = line.replace(" ", "")
             if "=" not in line and ";" not in line:
                 header = True
                 break
     if not header:
-        sample = "string nextAppointment(string type, int day, int daysToNext)"
+        sample = "string nextAppointment(int day, int daysToNext)"
         raise check50.Failure("Your function header should look similar to the following:\n\t" + sample)
 
 @check50.check(exists)
