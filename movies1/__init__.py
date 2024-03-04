@@ -27,7 +27,7 @@ def test1():
 @check50.check(compiles)
 def test2():
     """Adding a movie then listing works"""
-    output = check50.run("./movies").stdin("a").stdin("Star Wars").stdin("Ford, Harrison").stdin("1977").stdin("9.7").stdin("l").stdout()
+    output = check50.run("./movies").stdin("a").stdin("Star Wars").stdin("Ford, Harrison").stdin("1977").stdin("9.7").stdin("l").stdout().stdin("e")
     lines = output.split("\n")
     if "Star Wars" not in lines[0]:
         raise check50.Failure("Movie title should be printed first")
