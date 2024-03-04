@@ -32,7 +32,7 @@ def test2():
     if "Star Wars" not in lines[0]:
         raise check50.Failure("Movie title should be printed first")
     if "Ford, Harrison" not in lines[1]:
-        raise check50.Failure("Actor should be printed second")
+        raise check50.Failure("Actor should be printed second\n" + lines)
     if "1977" not in lines[2]:
         raise check50.Failure("Year should be printed third")
     if "9.7" not in lines[3]:
