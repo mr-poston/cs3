@@ -33,7 +33,7 @@ def test2():
     length = contents.count(".length")
     if not (title == 4 and artist == 4 and length == 4):
         raise check50.Failure("You need to create and print two `song`s")
-    if "cout" not in contents or "printf" not in contents:
+    if "cout" not in contents and "printf" not in contents:
         raise check50.Failure("Make sure you print the `song`s to the terminal")
 
 @check50.check(compiles)
