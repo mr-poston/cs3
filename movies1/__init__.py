@@ -18,7 +18,7 @@ def compiles():
 def test1():
     """Struct contains correct members"""
     contents = get_contents()
-    start = contents.index("struct song")
+    start = contents.index("struct movie")
     limit = contents.index("};") + 2
     struct = contents[start:limit]
     if not (struct.count("string") == 2 and "int" in struct and ("double" in struct or "float" in struct)):
