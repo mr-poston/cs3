@@ -31,12 +31,14 @@ def test2():
     lines = output.split("\n")
     if "Star Wars" not in lines[0]:
         raise check50.Failure("Movie title should be printed first")
-    if "Ford, Harrison" not in lines[1]:
-        raise check50.Failure("Actor should be printed second\n" + "\n".join(lines))
-    if "1977" not in lines[2]:
-        raise check50.Failure("Year should be printed third")
+    if "1977" not in lines[1]:
+        raise check50.Failure("Year should be printed second")
+    if "Ford, Harrison" not in lines[2]:
+        raise check50.Failure("Actor should be printed third")
     if "9.7" not in lines[3]:
         raise check50.Failure("Rating should be printed fourth")
+    if not (lines[4] == "" or lines[4].isspace()):
+        raise check50.Failure("Make sure you print an empty line after the movie info")
 
 @check50.check(compiles)
 def test3():
