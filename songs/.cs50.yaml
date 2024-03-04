@@ -1,0 +1,8 @@
+check50:
+    files: &check50_files
+        - !exclude "*"
+        - !include "songs"
+        - !include "songs.cpp"
+
+submit50:
+    files: *check50_files
