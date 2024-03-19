@@ -1,9 +1,5 @@
 import check50
 
-def get_contents():
-    with open("movies.cpp", "r") as file:
-        return file.read()
-
 @check50.check()
 def exists():
     """movies.cpp exists"""
@@ -16,7 +12,7 @@ def compiles():
 
 @check50.check(exists)
 def test1():
-     """Listing movies works"""
+    """Listing movies works"""
     output = check50.run("./movies").stdin("l").stdin("e", prompt=False).stdout()
     if output[-3:] != "483":
         raise check50.Failure("Your output should list 483 movies!")
