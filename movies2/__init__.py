@@ -15,7 +15,7 @@ def test1():
     """Listing movies works"""
     output = check50.run("./movies").stdin("l").stdin("e", prompt=False).stdout()
     if output[-3:] != "483":
-        raise check50.Failure("Your output should list 483 movies!")
+        raise check50.Failure("Your output should list 483 movies!: " + output[-3:])
     lines = output.split("\n")
     if len(lines) < 2415:
         raise check50.Failure("Your output should list 483 movies!")
