@@ -29,4 +29,4 @@ def test2():
 @check50.check(exists)
 def test3():
     """Produces correct output when file fails to open"""
-    check50.run("./sum_file").stdin("blah.txt").stdout("Error: file didn't open").exit(0)
+    check50.run("./sum_file").stdin("blah.txt").stdout("Error: file didn't open").exit(1)
