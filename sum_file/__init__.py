@@ -1,5 +1,9 @@
 import check50
 
+def get_contents():
+    with open("sum_file.cpp", "r") as file:
+        return file.read()
+
 @check50.check()
 def exists():
     """sum_file.cpp exists"""
@@ -28,5 +32,12 @@ def test2():
 
 @check50.check(exists)
 def test3():
-    """Produces correct output when file fails to open"""
+    """Produces correct output when file fails to open and exits with a code of 1"""
     check50.run("./sum_file").stdin("blah.txt").stdout("Error: file didn't open").exit(1)
+
+@check50.check(exists)
+def test4():
+    """You did not hard code the answer!"""
+    contents = get_contents()
+    if "391787" in contents or "10" in contents:
+        raise check50.Failure("Your source code should not contain any numbers other than `0` and `1`")
