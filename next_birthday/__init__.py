@@ -45,7 +45,10 @@ def test5():
     lines = contents.split("\n")
     for i in range(len(lines)):
         if "if(age<2)" in lines[i].replace(" ", "") or "if(age<=1)" in lines[i].replace(" ", ""):
-            if "throw\"Ageinvalid.Tooyoung.\";" not in lines[i + 1].replace(" ", ""):
+            next_line = lines[i + 1]
+            if "{" not in lines[i]:
+                next_line = lines[i + 2]
+            if "throw\"Ageinvalid.Tooyoung.\";" not in next_line.replace(" ", ""):
                 raise check50.Failure("Make sure your code throws \"Age invalid. Too young.\" if age is less than 2")
 
 @check50.check(exists)
@@ -57,7 +60,10 @@ def test6():
     lines = contents.split("\n")
     for i in range(len(lines)):
         if "if(age>110)" in lines[i].replace(" ", "") or "if(age>=111)" in lines[i].replace(" ", ""):
-            if "throw\"Ageinvalid.Tooold.\";" not in lines[i + 1].replace(" ", ""):
+            next_line = lines[i + 1]
+            if "{" not in lines[i]:
+                next_line = lines[i + 2]
+            if "throw\"Ageinvalid.Tooold.\";" not in next_line.replace(" ", ""):
                 raise check50.Failure("Make sure your code throws \"Age invalid. Too old.\" if age is greater than 110")
 
 @check50.check(exists)
