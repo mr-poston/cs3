@@ -1,0 +1,8 @@
+check50:
+    files: &check50_files
+        - !exclude "*"
+        - !include "next_birthday"
+        - !include "next_birthday.cpp"
+
+submit50:
+    files: *check50_files
