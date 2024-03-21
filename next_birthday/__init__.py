@@ -17,7 +17,7 @@ def compiles():
 @check50.check(exists)
 def test1():
     """Refuses non-integer age input"""
-    check50.run("./next_birthday").stdin("teenager").stdout("Please enter a valid.*", regex=True).stdin("10").stdout(".?", regex=True).exit(0)
+    check50.run("./next_birthday").stdin("teenager").stdout("Please enter a valid.* ", regex=True).stdin("10").stdout(".?", regex=True).exit(0)
 
 @check50.check(exists)
 def test2():
