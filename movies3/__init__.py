@@ -11,5 +11,5 @@ def compiles():
     check50.run("make movies").exit(0)
 
 @check50.check(exists)
-def test1():
+def test0():
     raise check50.Failure("This test failed because the tests are incomplete. Please try again later.")
