@@ -38,7 +38,7 @@ def test4():
 
 @check50.check(exists)
 def test5():
-    """Trows 'Age invalid. Too young.' for age input less than 2"""
+    """Throws 'Age invalid. Too young.' for age input less than 2"""
     contents = get_contents()
     if "throw\"Ageinvalid.Tooyoung.\";" not in contents.replace(" ", ""):
         raise check50.Failure("Make sure your code throws \"Age invalid. Too young.\" if age is less than 2")
@@ -53,7 +53,7 @@ def test5():
 
 @check50.check(exists)
 def test6():
-    """Trows 'Age invalid. Too old.' for age input greater than 110"""
+    """Throws 'Age invalid. Too old.' for age input greater than 110"""
     contents = get_contents()
     if "throw\"Ageinvalid.Tooold.\";" not in contents.replace(" ", ""):
         raise check50.Failure("Make sure your code throws \"Age invalid. Too old.\" if age is greater than 110")
