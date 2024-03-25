@@ -1,0 +1,7 @@
+jmp +3
+acc +17
+jmp -2
+acc +8
+sit +45
+jmp -4 
+acc -5

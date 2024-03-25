@@ -1,0 +1,10 @@
+check50:
+    files: &check50_files
+        - !exclude "*"
+        - !include "buggy"
+        - !include "buggy.cpp"
+        - !include "example.txt"
+        - !include "input.txt"
+
+submit50:
+    files: *check50_files
