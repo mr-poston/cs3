@@ -45,7 +45,26 @@ def test4():
     """Search by year"""
     check50.run("./movies").stdin("s").stdout(".*1.*2.*3.*4.*", regex=True) \
                            .stdin("2", prompt=False) \
-                           .stdin("2010", prompt=False) \
+                           .stdin("2000", prompt=False) \
                            .stdin("2012", prompt=False) \
-                           .stdout(".*36", regex=True) \
+                           .stdout(".*145", regex=True) \
+                           .stdin("e").exit(0)
+
+@check50.check(compiles)
+def test5():
+    """Search by actor"""
+    check50.run("./movies").stdin("s").stdout(".*1.*2.*3.*4.*", regex=True) \
+                           .stdin("3", prompt=False) \
+                           .stdin("Arnold", prompt=False) \
+                           .stdout(".*25", regex=True) \
+                           .stdin("e").exit(0)
+
+@check50.check(compiles)
+def test6():
+    """Search by rating"""
+    check50.run("./movies").stdin("s").stdout(".*1.*2.*3.*4.*", regex=True) \
+                           .stdin("4", prompt=False) \
+                           .stdin("2", prompt=False) \
+                           .stdin("4", prompt=False) \
+                           .stdout(".*12", regex=True) \
                            .stdin("e").exit(0)
