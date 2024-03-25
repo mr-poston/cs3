@@ -16,4 +16,7 @@ def test0():
 
 @check50.check(compiles)
 def test1():
-    check50.run("./movies").stdin("s").stdout(".*1.*2.*3.*4.*", regex=True).stdin("1", prompt=False).stdout(".*1").exit(0)
+    check50.run("./movies").stdin("s").stdout(".*1.*2.*3.*4.*", regex=True) \
+                           .stdin("1", prompt=False).stdout(".*", regex = True) \
+                           .stdin("star", prompt=False).stdout(".*1", regex=True) \
+                           .stdin("e").exit(0)
