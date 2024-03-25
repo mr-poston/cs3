@@ -16,7 +16,36 @@ def test0():
 
 @check50.check(compiles)
 def test1():
+    """Search by title"""
     check50.run("./movies").stdin("s").stdout(".*1.*2.*3.*4.*", regex=True) \
                            .stdin("1", prompt=False).stdout(".*", regex = True) \
                            .stdin("star", prompt=False).stdout(".*1", regex=True) \
+                           .stdin("e").exit(0)
+
+@check50.check(compiles)
+def test2():
+    """Search rejects non-integer input"""
+    check50.run("./movies").stdin("s").stdout(".*1.*2.*3.*4.*", regex=True) \
+                           .stdin("title", prompt=False).stdout(".*", regex = True) \
+                           .stdin("1", prompt=False).stdout(".*", regex = True) \
+                           .stdin("star", prompt=False).stdout(".*1", regex=True) \
+                           .stdin("e").exit(0)
+
+@check50.check(compiles)
+def test3():
+    """Search rejects integer input other than 1, 2, 3, or 4"""
+    check50.run("./movies").stdin("s").stdout(".*1.*2.*3.*4.*", regex=True) \
+                           .stdin("0", prompt=False).stdout(".*", regex = True) \
+                           .stdin("1", prompt=False).stdout(".*", regex = True) \
+                           .stdin("star", prompt=False).stdout(".*1", regex=True) \
+                           .stdin("e").exit(0)
+
+@check50.check(compiles)
+def test4():
+    """Search by year"""
+    check50.run("./movies").stdin("s").stdout(".*1.*2.*3.*4.*", regex=True) \
+                           .stdin("2", prompt=False) \
+                           .stdin("2010", prompt=False) \
+                           .stdin("2012", prompt=False) \
+                           .stdout(".*11", regex=True) \
                            .stdin("e").exit(0)
