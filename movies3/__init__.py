@@ -47,5 +47,5 @@ def test4():
                            .stdin("2", prompt=False) \
                            .stdin("2010", prompt=False) \
                            .stdin("2012", prompt=False) \
-                           .stdout(".*11", regex=True) \
+                           .stdout(".*12", regex=True) \
                            .stdin("e").exit(0)
