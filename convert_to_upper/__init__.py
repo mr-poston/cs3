@@ -24,7 +24,11 @@ def compiles():
 def test1():
     """upperCase function exists in upper.h"""
     lines = get_file_lines("upper.h")
-    if "upperCase" not in lines:
+    found = False
+    for line in lines"
+        if "upperCase" in line:
+            found = True
+    if not found:
         raise check50.Failure("Make sure to define a function called `upperCase`")
 
 @check50.check(exists_h)
