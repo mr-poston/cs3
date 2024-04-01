@@ -25,7 +25,7 @@ def test1():
     """upperCase function exists in upper.h"""
     lines = get_file_lines("upper.h")
     found = False
-    for line in lines"
+    for line in lines:
         if "upperCase" in line:
             found = True
     if not found:
