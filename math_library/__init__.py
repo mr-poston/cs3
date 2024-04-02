@@ -39,3 +39,8 @@ def test2():
 def test3():
     """Works for 8 2"""
     check50.run("./math").stdin("8").stdin("2", prompt=False).stdout("Add: 10\nSubtract: 6\nMultiply: 16\nDivide: 4").exit(0)
+
+@check50.check()
+def test4():
+    """Works for 0 0"""
+    check50.run("./math").stdin("0").stdin("0", prompt=False).stdout("Add: 0\nSubtract: 0\nMultiply: 0\nDivide: 0").exit(0)
