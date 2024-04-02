@@ -27,10 +27,15 @@ def compiles():
 
 @check50.check()
 def test1():
-    """Works"""
+    """Works for 3 4"""
     check50.run("./math").stdin("3").stdin("4", prompt=False).stdout("Add: 7\nSubtract: -1\nMultiply: 12\nDivide: 0.75").exit(0)
 
 @check50.check()
 def test2():
-    """Works"""
-    check50.run("./math").stdin("3").stdin("0", prompt=False).stdout("Add: 3\nSubtract: 3\nMultiply: 0\nDivide: 0.0").exit(0)
+    """Works for 3 0"""
+    check50.run("./math").stdin("3").stdin("0", prompt=False).stdout("Add: 3\nSubtract: 3\nMultiply: 0\nDivide: 0").exit(0)
+
+@check50.check()
+def test3():
+    """Works for 8 2"""
+    check50.run("./math").stdin("3").stdin("0", prompt=False).stdout("Add: 10\nSubtract: 6\nMultiply: 16\nDivide: 4").exit(0)
