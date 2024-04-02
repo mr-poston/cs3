@@ -28,4 +28,4 @@ def compiles():
 @check50.check()
 def test1():
     """Works"""
-    check50.run("./math").stdin("3").stdin("4", prompt=False).stdout("Add: 7\nSubtract: -1\nMultiply: 12\nDivide: 0.75").exit(0)
+    check50.run("./math").stdin("2").stdin("4", prompt=False).stdout("Add: 7\nSubtract: -1\nMultiply: 12\nDivide: 0.75").exit(0)
