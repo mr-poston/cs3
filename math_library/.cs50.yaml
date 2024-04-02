@@ -5,6 +5,7 @@ check50:
         - !include "main.cpp"
         - !include "math.cpp"
         - !include "math.h"
+        - !include "Makefile"
 
 submit50:
     files: *check50_files
