@@ -51,7 +51,7 @@ double readDouble(const double low, const double high, const string prompt, stri
     double value = readDouble(prompt, reprompt);
 
     while (value < low || value > high) {
-        value = readInt(reprompt);
+        value = readDouble(reprompt);
     }
 
     return value;
