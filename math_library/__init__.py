@@ -23,8 +23,9 @@ def exists3():
 @check50.check()
 def compiles():
     """code compiles"""
-    check50.run("make main").exit(0)
+    check50.run("make math").exit(0)
 
 @check50.check()
 def test1():
-    pass
+    """Works"""
+    check50.run("./math").stdin("3").stdin("4", prompt=False).stdout("Add: 7\nSubtract: -1\nMultiply: 12\nDivide: 0.75").exit(0)
