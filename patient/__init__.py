@@ -28,3 +28,61 @@ def test1():
                             .stdin("Walter").stdin("90").stdin("108").stdin("97") \
                             .stdin("Jacob").stdin("100.5").stdin("exit") \
                             .stdout(".*DAVID\nLOUISE\nWALTER").exit(0)
+
+@check50.check()
+def test2():
+    """patient struct exists"""
+    lines = get_file_lines("patient.cpp")
+    found = False
+    for line in lines:
+        if "struct patient" in line:
+            found = True
+    if not found:
+        raise check50.Failure("You must have a struct called patient")
+
+@check50.check()
+def test3():
+    """vector of patients exists"""
+    lines = get_file_lines("patient.cpp")
+    found = False
+    for line in lines:
+        if "vector<patient>" in line:
+            found = True
+    if not found:
+        raise check50.Failure("You must use a vector of `patient`s")
+
+@check50.check()
+def test4():
+    """Use of readLine"""
+    lines = get_file_lines("patient.cpp")
+    found = False
+    for line in lines:
+        if "readLine(\"" in line.replace(" ", ""):
+            found = True
+    if not found:
+        raise check50.Failure("You must use the readLine function from the util library")
+
+@check50.check()
+def test5():
+    """Use of toUpperCase"""
+    lines = get_file_lines("patient.cpp")
+    found = False
+    for line in lines:
+        if "toUpperCase(" in line.replace(" ", ""):
+            found = True
+    if not found:
+        raise check50.Failure("You must use the toUpperCase function from the util library")
+
+@check50.check()
+def test6():
+    """Use of readLine"""
+    lines = get_file_lines("patient.cpp")
+    found = False
+    for line in lines:
+        if "readDouble(" in line.replace(" ", ""):
+            found = True
+    if not found:
+        raise check50.Failure("You must use the readDouble function from the util library")
+
+
+    
