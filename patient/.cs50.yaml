@@ -1,0 +1,11 @@
+check50:
+    files: &check50_files
+        - !exclude "*"
+        - !include "patient"
+        - !include "patient.cpp"
+        - !include "util.cpp"
+        - !include "util.h"
+        - !include "Makefile"
+
+submit50:
+    files: *check50_files
