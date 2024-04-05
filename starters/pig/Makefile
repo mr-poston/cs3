@@ -1,2 +1,2 @@
-haiku: util.cpp haiku.cpp
-	g++ util.h util.cpp haiku.cpp -o haiku
+pig: util.cpp pig.cpp
+	g++ util.h util.cpp pig.cpp -o pig
