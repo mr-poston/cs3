@@ -21,7 +21,8 @@ def test1():
     magic_lines = []
     output = check50.run("./magic").stdout()
     output = output.lower()
-    for line in output:
+    lines = output.split("\n")
+    for line in lines:
         if "magic" in line:
             magic_lines.append(line)
     for i in range(len(magic_lines)):
