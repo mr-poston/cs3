@@ -18,4 +18,15 @@ def compiles():
 
 @check50.check()
 def test1():
-    pass
+    magic_lines = []
+    output = check50.run("./magic").stdout()
+    output = output.lower()
+    for line in output:
+        if "magic" in line:
+            magic_lines.append(line)
+    for i in range(len(magic_lines)):
+        if 0 <= i < 3:
+            if "not" in magic_lines[i]:
+                raise check50.Failure("The first three squares should be magic! Make sure your output indicates that.")
+        elif "not" not in magic_lines[i]:
+            raise check50.Failure("The last four squares should NOT be magic! Make sure your output indicates that.")
