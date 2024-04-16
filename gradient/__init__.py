@@ -46,4 +46,4 @@ def test2():
             continue
     num_check = [7,9,11,13,15,17,9,11,13,15,17,19,11,13,15,17,19,21,13,15,17,19,21,23,15,17,19,21,23,25,17,19,21,23,25,27,19,21,23,25,27,29]
     if numbers != num_check:
-        raise check50.Failure(str(numbers) + "\n" + str(num_check))
+        raise check50.Failure("Actual: " + str(numbers) + "\n\tExpected: " + str(num_check))
