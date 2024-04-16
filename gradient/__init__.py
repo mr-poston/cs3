@@ -30,7 +30,7 @@ def test1():
             continue
     num_check = [2,6,10,14,18,6,10,14,18,22,10,14,18,22,26,14,18,22,26,30]
     if numbers != num_check:
-        raise check50.Failure("Actual: " + str(numbers) + "\n    Expected: " + str(num_check))
+        raise check50.Failure("Actual:    " + str(numbers) + "\n    Expected: " + str(num_check))
     
 @check50.check()
 def test2():
@@ -46,4 +46,4 @@ def test2():
             continue
     num_check = [7,9,11,13,15,17,9,11,13,15,17,19,11,13,15,17,19,21,13,15,17,19,21,23,15,17,19,21,23,25,17,19,21,23,25,27,19,21,23,25,27,29]
     if numbers != num_check:
-        raise check50.Failure("Actual: " + str(numbers) + "\n    Expected: " + str(num_check))
+        raise check50.Failure("Actual:    " + str(numbers) + "\n    Expected: " + str(num_check))
