@@ -24,8 +24,10 @@ def test1():
     values = output.split("\t")
     numbers = []
     for number in values:
-        if type(number) == int:
+        try:
             numbers.append(int(number))
+        except ValueError:
+            continue
     num_check = [2,6,10,14,18,6,10,14,18,22,10,14,18,22,26,14,18,22,26,30]
     if numbers != num_check:
         raise check50.Failure(str(numbers) + "\n" + str(num_check))
